@@ -1,0 +1,20 @@
+[project]
+name = "trust-ring-detector"
+version = "0.1.0"
+description = "Collusion ring detection for Ethos Network"
+requires-python = ">=3.9"
+dependencies = [
+    "networkx>=3.0",
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "ethos-py>=0.2.3",
+    "python-dotenv>=1.0",
+    "tqdm>=4.65",
+]
+
+[project.scripts]
+analyze = "src.main:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

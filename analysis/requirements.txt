@@ -1,0 +1,6 @@
+networkx>=3.0
+numpy>=1.24
+pandas>=2.0
+ethos-py>=0.2.3
+python-dotenv>=1.0
+tqdm>=4.65
