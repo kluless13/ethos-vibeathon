@@ -1,5 +1,20 @@
 import type { Metadata } from "next";
 
+const miniAppEmbed = {
+  version: "1",
+  imageUrl: "https://ethos-vibeathon.vercel.app/api/og/start",
+  button: {
+    title: "Check Trust Score",
+    action: {
+      type: "launch_miniapp",
+      url: "https://ethos-vibeathon.vercel.app/miniapp",
+      name: "Ethos Trust Check",
+      splashImageUrl: "https://ethos-vibeathon.vercel.app/api/og/start",
+      splashBackgroundColor: "#0a0a0a",
+    },
+  },
+};
+
 export const metadata: Metadata = {
   title: "Ethos Trust Check",
   description: "Check reputation before vouching on Ethos Network",
@@ -10,11 +25,8 @@ export const metadata: Metadata = {
     type: "website",
   },
   other: {
-    "fc:frame": "vNext",
-    "fc:frame:image": "https://ethos-vibeathon.vercel.app/api/og/start",
-    "fc:frame:button:1": "Open App",
-    "fc:frame:button:1:action": "link",
-    "fc:frame:button:1:target": "https://ethos-vibeathon.vercel.app/miniapp",
+    "fc:miniapp": JSON.stringify(miniAppEmbed),
+    "fc:frame": JSON.stringify(miniAppEmbed),
   },
 };
 
