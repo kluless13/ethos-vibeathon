@@ -1,0 +1,18 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjAsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIn0",
+    "payload": "eyJkb21haW4iOiJldGhvcy12aWJlYXRob24udmVyY2VsLmFwcCJ9",
+    "signature": "MHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw"
+  },
+  "frame": {
+    "version": "1",
+    "name": "Ethos Trust Check",
+    "iconUrl": "https://ethos-vibeathon.vercel.app/api/og/start",
+    "homeUrl": "https://ethos-vibeathon.vercel.app/api/frame",
+    "imageUrl": "https://ethos-vibeathon.vercel.app/api/og/start",
+    "buttonTitle": "Check Trust Score",
+    "splashImageUrl": "https://ethos-vibeathon.vercel.app/api/og/start",
+    "splashBackgroundColor": "#0a0a0a",
+    "webhookUrl": "https://ethos-vibeathon.vercel.app/api/frame/check"
+  }
+}
