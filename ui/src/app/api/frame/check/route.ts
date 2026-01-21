@@ -1,32 +1,28 @@
 import { NextRequest, NextResponse } from "next/server";
+import { getEthosProfile } from "@/lib/ethos";
 
-const FRAME_BASE_URL = process.env.NEXT_PUBLIC_FRAME_URL || "https://ethos-trust-frame.vercel.app";
+const FRAME_BASE_URL = process.env.NEXT_PUBLIC_FRAME_URL || "https://ethos-vibeathon.vercel.app";
 
-type Profile = {
+type TrustRingProfile = {
   profile_id: number;
   username: string | null;
-  display_name: string | null;
-  ethos_score: number | null;
   composite_score: number;
   risk_level: string;
-  ring_score: number;
-  cluster_score: number;
 };
 
-// Cache profiles in memory after first load
-let profilesCache: Profile[] | null = null;
+// Cache Trust Ring data in memory
+let trustRingCache: TrustRingProfile[] | null = null;
 
-async function loadProfiles(): Promise<Profile[]> {
-  if (profilesCache) return profilesCache;
+async function loadTrustRingData(): Promise<TrustRingProfile[]> {
+  if (trustRingCache) return trustRingCache;
 
-  // Fetch from public URL (works on Vercel)
-  const baseUrl = FRAME_BASE_URL.includes("localhost")
-    ? "http://localhost:3000"
-    : FRAME_BASE_URL;
-
-  const res = await fetch(`${baseUrl}/data/profiles_full.json`);
-  profilesCache = await res.json();
-  return profilesCache!;
+  try {
+    const res = await fetch(`${FRAME_BASE_URL}/data/profiles_full.json`);
+    trustRingCache = await res.json();
+    return trustRingCache!;
+  } catch {
+    return [];
+  }
 }
 
 export async function POST(req: NextRequest) {
@@ -39,40 +35,65 @@ export async function POST(req: NextRequest) {
       return returnErrorFrame("Please enter a username");
     }
 
-    const profiles = await loadProfiles();
-    const profile = profiles.find(
-      (p) => p.username?.toLowerCase() === username
-    );
+    // Fetch from Ethos API
+    const ethosProfile = await getEthosProfile(username);
 
-    if (!profile) {
+    if (!ethosProfile) {
       return returnNotFoundFrame(username);
     }
 
-    return returnResultFrame(profile);
+    // Get Trust Ring data if available
+    const trustRingData = await loadTrustRingData();
+    const trustRingProfile = trustRingData.find(
+      (p) => p.username?.toLowerCase() === username || p.profile_id === ethosProfile.id
+    );
+
+    return returnResultFrame(ethosProfile, trustRingProfile);
   } catch (error) {
     console.error("Frame check error:", error);
     return returnErrorFrame("Something went wrong");
   }
 }
 
-function returnResultFrame(profile: Profile) {
-  const riskEmoji = profile.composite_score >= 50 ? "🚨" :
-                    profile.composite_score >= 30 ? "⚠️" :
-                    profile.composite_score >= 10 ? "ℹ️" : "✅";
+function returnResultFrame(
+  ethos: {
+    id: number;
+    username?: string;
+    displayName?: string;
+    score: number;
+    scoreLevel: string;
+    vouchesReceived: number;
+    ethStaked: number
+  },
+  trustRing?: TrustRingProfile
+) {
+  const hasRisk = trustRing && trustRing.composite_score >= 30;
+  const riskLevel = trustRing?.risk_level || "minimal";
+
+  // Build image URL with all data
+  const imageParams = new URLSearchParams({
+    username: ethos.username || "unknown",
+    score: ethos.score.toString(),
+    level: ethos.scoreLevel,
+    vouches: ethos.vouchesReceived.toString(),
+    eth: ethos.ethStaked.toFixed(2),
+    risk: hasRisk ? riskLevel : "none",
+    riskScore: trustRing?.composite_score?.toString() || "0",
+  });
 
   const html = `
     <!DOCTYPE html>
     <html>
       <head>
         <meta property="fc:frame" content="vNext" />
-        <meta property="fc:frame:image" content="${FRAME_BASE_URL}/api/og/result?username=${profile.username}&score=${profile.composite_score}&ethos=${profile.ethos_score || 0}&risk=${profile.risk_level}" />
+        <meta property="fc:frame:image" content="${FRAME_BASE_URL}/api/og/result?${imageParams}" />
         <meta property="fc:frame:button:1" content="View on Ethos" />
         <meta property="fc:frame:button:1:action" content="link" />
-        <meta property="fc:frame:button:1:target" content="https://app.ethos.network/profile/x/${profile.username}" />
+        <meta property="fc:frame:button:1:target" content="https://app.ethos.network/profile/x/${ethos.username}" />
         <meta property="fc:frame:button:2" content="Check Another" />
         <meta property="fc:frame:button:2:action" content="link" />
         <meta property="fc:frame:button:2:target" content="${FRAME_BASE_URL}/api/frame" />
-        <meta property="og:title" content="${riskEmoji} @${profile.username} - Trust Score" />
+        <meta property="og:title" content="@${ethos.username} - Ethos Score: ${ethos.score}" />
       </head>
     </html>
   `;
