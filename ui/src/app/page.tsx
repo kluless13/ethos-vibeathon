@@ -681,12 +681,13 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <button onClick={handleBack} className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF4000] to-[#ff6b35] flex items-center justify-center shadow-lg shadow-[#FF4000]/20 group-hover:scale-105 transition-transform">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 8v8M8 12l4-4 4 4" />
-                </svg>
-              </div>
+              <Image
+                src="/ringer.png"
+                alt="Trust Ring Detector"
+                width={40}
+                height={40}
+                className="rounded-xl shadow-lg shadow-[#FF4000]/20 group-hover:scale-105 transition-transform"
+              />
               <div>
                 <h1 className="text-lg font-[family-name:var(--font-display)] italic group-hover:text-[#FF4000] transition-colors">
                   Trust Ring Detector
