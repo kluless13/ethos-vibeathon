@@ -7,11 +7,11 @@
   "frame": {
     "version": "1",
     "name": "Ethos Trust Check",
-    "iconUrl": "https://ethos-vibeathon.vercel.app/api/og/start",
+    "iconUrl": "https://ethos-vibeathon.vercel.app/ringer.png",
     "homeUrl": "https://ethos-vibeathon.vercel.app/miniapp",
     "imageUrl": "https://ethos-vibeathon.vercel.app/api/og/start",
     "buttonTitle": "Check Trust Score",
-    "splashImageUrl": "https://ethos-vibeathon.vercel.app/api/og/start",
+    "splashImageUrl": "https://ethos-vibeathon.vercel.app/ringer.png",
     "splashBackgroundColor": "#0a0a0a"
   }
 }
