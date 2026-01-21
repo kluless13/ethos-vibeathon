@@ -15,6 +15,7 @@
     "splashBackgroundColor": "#0a0a0a",
     "ogTitle": "Ethos Trust Check",
     "ogDescription": "Check reputation before vouching on Ethos Network",
-    "ogImageUrl": "https://ethos-vibeathon.vercel.app/api/og/start"
+    "ogImageUrl": "https://ethos-vibeathon.vercel.app/api/og/start",
+    "castShareUrl": "https://ethos-vibeathon.vercel.app/miniapp"
   }
 }
