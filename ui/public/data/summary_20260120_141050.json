@@ -1,0 +1,149 @@
+{
+  "timestamp": "20260120_141050",
+  "vouch_stats": {
+    "total_vouches": 53400,
+    "unique_vouchers": 7563,
+    "unique_subjects": 8651,
+    "unique_profiles": 9576
+  },
+  "graph_stats": {
+    "nodes": 9576,
+    "edges": 52386,
+    "density": 0.0005713369585844507,
+    "avg_in_degree": 5.470551378446116,
+    "avg_out_degree": 5.470551378446116
+  },
+  "ring_stats": {
+    "total_rings": 10000,
+    "profiles_in_rings": 744,
+    "rings_by_size": {
+      "3": 549,
+      "4": 4046,
+      "5": 5405
+    }
+  },
+  "isolated_clusters_count": 36,
+  "network_summary": {
+    "total_profiles": 9576,
+    "total_vouches": 52386,
+    "risk_distribution": {
+      "critical": 0,
+      "high": 1,
+      "medium": 496,
+      "low": 1216,
+      "minimal": 7863
+    },
+    "risk_percentages": {
+      "critical": 0.0,
+      "high": 0.01,
+      "medium": 5.18,
+      "low": 12.7,
+      "minimal": 82.11
+    },
+    "top_risky_profiles": [
+      {
+        "profile_id": 12928,
+        "ring_score": 100.0,
+        "cluster_score": 36.81,
+        "burst_score": 0.0,
+        "stake_score": 100.0,
+        "reciprocity_score": 0.0,
+        "composite_score": 54.2,
+        "risk_level": "high"
+      },
+      {
+        "profile_id": 24280,
+        "ring_score": 100.0,
+        "cluster_score": 36.81,
+        "burst_score": 0.0,
+        "stake_score": 60.0,
+        "reciprocity_score": 0.0,
+        "composite_score": 48.2,
+        "risk_level": "medium"
+      },
+      {
+        "profile_id": 12748,
+        "ring_score": 100.0,
+        "cluster_score": 0.0,
+        "burst_score": 0.0,
+        "stake_score": 100.0,
+        "reciprocity_score": 0.0,
+        "composite_score": 45.0,
+        "risk_level": "medium"
+      },
+      {
+        "profile_id": 5538,
+        "ring_score": 100.0,
+        "cluster_score": 0.0,
+        "burst_score": 0.0,
+        "stake_score": 100.0,
+        "reciprocity_score": 0.0,
+        "composite_score": 45.0,
+        "risk_level": "medium"
+      },
+      {
+        "profile_id": 5395,
+        "ring_score": 100.0,
+        "cluster_score": 0.0,
+        "burst_score": 0.0,
+        "stake_score": 100.0,
+        "reciprocity_score": 0.0,
+        "composite_score": 45.0,
+        "risk_level": "medium"
+      },
+      {
+        "profile_id": 9951,
+        "ring_score": 100.0,
+        "cluster_score": 0.0,
+        "burst_score": 0.0,
+        "stake_score": 100.0,
+        "reciprocity_score": 0.0,
+        "composite_score": 45.0,
+        "risk_level": "medium"
+      },
+      {
+        "profile_id": 12192,
+        "ring_score": 100.0,
+        "cluster_score": 0.0,
+        "burst_score": 0.0,
+        "stake_score": 100.0,
+        "reciprocity_score": 0.0,
+        "composite_score": 45.0,
+        "risk_level": "medium"
+      },
+      {
+        "profile_id": 13358,
+        "ring_score": 100.0,
+        "cluster_score": 0.0,
+        "burst_score": 0.0,
+        "stake_score": 100.0,
+        "reciprocity_score": 0.0,
+        "composite_score": 45.0,
+        "risk_level": "medium"
+      },
+      {
+        "profile_id": 5793,
+        "ring_score": 100.0,
+        "cluster_score": 0.0,
+        "burst_score": 0.0,
+        "stake_score": 100.0,
+        "reciprocity_score": 0.0,
+        "composite_score": 45.0,
+        "risk_level": "medium"
+      },
+      {
+        "profile_id": 5205,
+        "ring_score": 100.0,
+        "cluster_score": 0.0,
+        "burst_score": 0.0,
+        "stake_score": 100.0,
+        "reciprocity_score": 0.0,
+        "composite_score": 45.0,
+        "risk_level": "medium"
+      }
+    ],
+    "avg_risk_score": 5.37
+  },
+  "risk_threshold": 30.0,
+  "high_risk_count": 497
+}
