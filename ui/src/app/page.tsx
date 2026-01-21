@@ -580,6 +580,19 @@ function ProfileListItem({ profile, onClick }: { profile: Profile; onClick: () =
   );
 }
 
+// Fuzzy search function
+function fuzzyMatch(query: string, target: string): boolean {
+  if (!target) return false;
+  const q = query.toLowerCase();
+  const t = target.toLowerCase();
+  if (t.includes(q)) return true;
+  let qi = 0;
+  for (let i = 0; i < t.length && qi < q.length; i++) {
+    if (t[i] === q[qi]) qi++;
+  }
+  return qi === q.length;
+}
+
 export default function Home() {
   const [profiles, setProfiles] = useState<Profile[]>([]);
   const [rings, setRings] = useState<Ring[]>([]);
@@ -589,6 +602,7 @@ export default function Home() {
   const [notFound, setNotFound] = useState(false);
   const [loading, setLoading] = useState(true);
   const [view, setView] = useState<"search" | "learn" | "dashboard">("search");
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
   useEffect(() => {
     async function loadData() {
@@ -643,6 +657,20 @@ export default function Home() {
       .slice(0, 10),
     [profiles]
   );
+
+  const suggestions = useMemo(() => {
+    if (!searchQuery.trim() || searchQuery.length < 2) return [];
+    return profiles
+      .filter(p => p.username && fuzzyMatch(searchQuery, p.username))
+      .slice(0, 6);
+  }, [searchQuery, profiles]);
+
+  const selectSuggestion = (profile: Profile) => {
+    setSearchQuery(profile.username || "");
+    setShowSuggestions(false);
+    setSearchResult(profile);
+    setNotFound(false);
+  };
 
   if (loading) {
     return (
@@ -733,23 +761,70 @@ export default function Home() {
               </div>
             )}
 
-            <div className="max-w-2xl mx-auto mb-10">
+            <div className="max-w-2xl mx-auto mb-10 relative">
               <div className="flex gap-3">
-                <input
-                  type="text"
-                  placeholder="Enter X handle (e.g., @vitalik)"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-                  className="flex-1 bg-zinc-900/80 border border-zinc-700/50 rounded-xl px-5 py-4 text-white placeholder-zinc-500 focus:border-[#FF4000]/50 focus:outline-none text-lg transition-all"
-                />
+                <div className="flex-1 relative">
+                  <input
+                    type="text"
+                    placeholder="Enter X handle (e.g. serpin, VitalikButerin)"
+                    value={searchQuery}
+                    onChange={(e) => {
+                      setSearchQuery(e.target.value);
+                      setShowSuggestions(true);
+                    }}
+                    onFocus={() => setShowSuggestions(true)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        handleSearch();
+                        setShowSuggestions(false);
+                      }
+                    }}
+                    className="w-full bg-zinc-900/80 border border-zinc-700/50 rounded-xl px-5 py-4 text-white placeholder-zinc-500 focus:border-[#FF4000]/50 focus:outline-none text-lg transition-all"
+                  />
+                  {/* Autocomplete dropdown */}
+                  {showSuggestions && suggestions.length > 0 && (
+                    <div className="absolute top-full left-0 right-0 mt-2 bg-zinc-900 border border-zinc-700 rounded-xl overflow-hidden z-50 shadow-2xl">
+                      {suggestions.map((s) => (
+                        <button
+                          key={s.profile_id}
+                          onClick={() => selectSuggestion(s)}
+                          className="w-full px-5 py-3 text-left hover:bg-zinc-800 flex items-center justify-between border-b border-zinc-800 last:border-0 transition-colors"
+                        >
+                          <div className="flex items-center gap-3">
+                            <span className="text-white font-medium">@{s.username}</span>
+                            {s.display_name && (
+                              <span className="text-zinc-500 text-sm">{s.display_name}</span>
+                            )}
+                          </div>
+                          <span className={`text-xs px-2 py-1 rounded ${
+                            s.composite_score >= 30 ? 'bg-red-500/20 text-red-400' :
+                            s.composite_score >= 10 ? 'bg-yellow-500/20 text-yellow-400' :
+                            'bg-emerald-500/20 text-emerald-400'
+                          }`}>
+                            {s.composite_score.toFixed(0)}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
                 <button
-                  onClick={handleSearch}
+                  onClick={() => {
+                    handleSearch();
+                    setShowSuggestions(false);
+                  }}
                   className="px-8 py-4 rounded-xl bg-[#FF4000] hover:bg-[#e63900] text-white font-semibold transition-all hover:shadow-lg hover:shadow-[#FF4000]/20"
                 >
                   Check →
                 </button>
               </div>
+              {/* Click outside to close */}
+              {showSuggestions && (
+                <div
+                  className="fixed inset-0 z-40"
+                  onClick={() => setShowSuggestions(false)}
+                />
+              )}
             </div>
 
             {searchResult && (

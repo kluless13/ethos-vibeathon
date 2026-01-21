@@ -11,7 +11,7 @@
     "homeUrl": "https://ethos-vibeathon.vercel.app/miniapp",
     "imageUrl": "https://ethos-vibeathon.vercel.app/api/og/start",
     "buttonTitle": "Check Trust Score",
-    "splashImageUrl": "https://ethos-vibeathon.vercel.app/ringer.png",
+    "splashImageUrl": "https://ethos-vibeathon.vercel.app/api/og/start",
     "splashBackgroundColor": "#0a0a0a",
     "ogTitle": "Ethos Trust Check",
     "ogDescription": "Check reputation before vouching on Ethos Network",
