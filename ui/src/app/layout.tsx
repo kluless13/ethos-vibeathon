@@ -1,17 +1,33 @@
 import type { Metadata } from "next";
-import { Inter, Instrument_Serif } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+const satoshi = localFont({
+  src: [
+    {
+      path: "../fonts/Satoshi-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Satoshi-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Satoshi-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-satoshi",
+  display: "swap",
 });
 
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"],
+const recoleta = localFont({
+  src: "../fonts/Recoleta-Regular.otf",
+  variable: "--font-recoleta",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -31,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${instrumentSerif.variable} antialiased`}>
+      <body className={`${satoshi.variable} ${recoleta.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

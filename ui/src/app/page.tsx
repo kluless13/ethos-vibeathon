@@ -182,7 +182,7 @@ function PatternCard({ pattern, count }: { pattern: keyof typeof PATTERN_INFO; c
             <span className="text-2xl font-bold text-[#FF4000]">{count.toLocaleString()}</span>
           )}
         </div>
-        <h3 className="text-lg font-semibold text-white mb-2 font-[family-name:var(--font-display)]">{info.title}</h3>
+        <h3 className="text-lg font-semibold text-white mb-2 font-[family-name:var(--font-recoleta)]">{info.title}</h3>
         <p className="text-zinc-400 text-sm leading-relaxed">{info.description}</p>
         <div className="mt-4 pt-4 border-t border-zinc-800/50">
           <code className="text-xs text-[#FF4000]/80 font-mono">{info.visual}</code>
@@ -689,7 +689,7 @@ export default function Home() {
                 className="rounded-xl shadow-lg shadow-[#FF4000]/20 group-hover:scale-105 transition-transform"
               />
               <div>
-                <h1 className="text-lg font-[family-name:var(--font-display)] italic group-hover:text-[#FF4000] transition-colors">
+                <h1 className="text-lg font-[family-name:var(--font-recoleta)] group-hover:text-[#FF4000] transition-colors">
                   Trust Ring Detector
                 </h1>
                 <p className="text-zinc-500 text-xs">Ethos Network Analysis</p>
@@ -724,7 +724,7 @@ export default function Home() {
           <>
             {!searchResult && !notFound && (
               <div className="text-center mb-12 animate-[fadeIn_0.5s_ease-out]">
-                <h2 className="text-4xl md:text-5xl mb-4 font-[family-name:var(--font-display)] italic">
+                <h2 className="text-4xl md:text-5xl mb-4 font-[family-name:var(--font-recoleta)]">
                   Should I <span className="text-[#FF4000]">vouch</span> for this person?
                 </h2>
                 <p className="text-zinc-400 text-lg max-w-xl mx-auto">
@@ -833,7 +833,7 @@ export default function Home() {
           <div className="animate-[fadeIn_0.5s_ease-out]">
             {/* Hero */}
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl mb-4 font-[family-name:var(--font-display)] italic">
+              <h2 className="text-4xl md:text-5xl mb-4 font-[family-name:var(--font-recoleta)]">
                 What is <span className="text-[#FF4000]">Collusion?</span>
               </h2>
               <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
@@ -852,7 +852,7 @@ export default function Home() {
                   <AnimatedRing />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-[family-name:var(--font-display)] italic text-white mb-3">
+                  <h3 className="text-2xl font-[family-name:var(--font-recoleta)] text-white mb-3">
                     The Classic Vouch Ring
                   </h3>
                   <p className="text-zinc-400 leading-relaxed mb-4">
@@ -883,7 +883,7 @@ export default function Home() {
                 <Image src="/G-e9dofWAAACB57.jpeg" alt="" fill className="object-cover" />
               </div>
               <div className="relative z-10">
-                <h3 className="text-2xl font-[family-name:var(--font-display)] italic text-white mb-4">
+                <h3 className="text-2xl font-[family-name:var(--font-recoleta)] text-white mb-4">
                   Composite Risk Score
                 </h3>
                 <p className="text-zinc-400 mb-6">
@@ -912,7 +912,7 @@ export default function Home() {
         {view === "dashboard" && (
           <div className="animate-[fadeIn_0.5s_ease-out]">
             <div className="mb-8">
-              <h2 className="text-3xl font-[family-name:var(--font-display)] italic">Network Health</h2>
+              <h2 className="text-3xl font-[family-name:var(--font-recoleta)]">Network Health</h2>
               <p className="text-zinc-400 mt-2">Real-time analysis of {summary?.graph_stats.nodes.toLocaleString()} profiles</p>
             </div>
 
