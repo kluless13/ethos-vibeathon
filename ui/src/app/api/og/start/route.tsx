@@ -3,6 +3,12 @@ import { ImageResponse } from "@vercel/og";
 export const runtime = "edge";
 
 export async function GET() {
+  // Load fonts
+  const [satoshiBold, recoleta] = await Promise.all([
+    fetch(new URL("https://ethos-vibeathon.vercel.app/fonts/Satoshi-Bold.otf")).then((res) => res.arrayBuffer()),
+    fetch(new URL("https://ethos-vibeathon.vercel.app/fonts/Recoleta-Regular.otf")).then((res) => res.arrayBuffer()),
+  ]);
+
   return new ImageResponse(
     (
       <div
@@ -67,7 +73,8 @@ export async function GET() {
           <div
             style={{
               fontSize: 56,
-              fontWeight: 700,
+              fontFamily: "Recoleta",
+              fontWeight: 400,
               color: "white",
               letterSpacing: "-0.02em",
             }}
@@ -77,6 +84,7 @@ export async function GET() {
           <div
             style={{
               fontSize: 26,
+              fontFamily: "Satoshi",
               color: "#a3a3a3",
               marginBottom: 48,
             }}
@@ -95,6 +103,7 @@ export async function GET() {
             background: "linear-gradient(135deg, #FF4000 0%, #ff6b35 100%)",
             color: "white",
             fontSize: 24,
+            fontFamily: "Satoshi",
             fontWeight: 700,
             boxShadow: "0 0 50px rgba(255, 64, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.3)",
           }}
@@ -112,6 +121,7 @@ export async function GET() {
             gap: 12,
             color: "#525252",
             fontSize: 18,
+            fontFamily: "Satoshi",
           }}
         >
           <span>Built for Ethos Vibeathon</span>
@@ -123,6 +133,20 @@ export async function GET() {
     {
       width: 1200,
       height: 630,
+      fonts: [
+        {
+          name: "Satoshi",
+          data: satoshiBold,
+          style: "normal",
+          weight: 700,
+        },
+        {
+          name: "Recoleta",
+          data: recoleta,
+          style: "normal",
+          weight: 400,
+        },
+      ],
     }
   );
 }
