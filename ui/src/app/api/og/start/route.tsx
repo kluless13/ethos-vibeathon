@@ -14,28 +14,46 @@ export async function GET() {
           alignItems: "center",
           justifyContent: "center",
           backgroundColor: "#0a0a0a",
-          backgroundImage: "radial-gradient(circle at 50% 0%, rgba(255, 64, 0, 0.15) 0%, transparent 50%)",
+          backgroundImage: "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255, 64, 0, 0.25) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 50% 120%, rgba(255, 64, 0, 0.15) 0%, transparent 50%)",
+          position: "relative",
         }}
       >
-        {/* Logo */}
+        {/* Decorative ring elements */}
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: 80,
-            height: 80,
-            borderRadius: 20,
-            background: "linear-gradient(135deg, #FF4000, #ff6b35)",
-            marginBottom: 30,
-            boxShadow: "0 0 60px rgba(255, 64, 0, 0.4)",
-            color: "white",
-            fontSize: 40,
-            fontWeight: 700,
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: 500,
+            height: 500,
+            borderRadius: "50%",
+            border: "1px solid rgba(255, 64, 0, 0.1)",
           }}
-        >
-          E
-        </div>
+        />
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: 400,
+            height: 400,
+            borderRadius: "50%",
+            border: "1px dashed rgba(255, 64, 0, 0.15)",
+          }}
+        />
+
+        {/* Logo */}
+        <img
+          src="https://ethos-vibeathon.vercel.app/ringer.png"
+          width={120}
+          height={120}
+          style={{
+            marginBottom: 32,
+            filter: "drop-shadow(0 0 40px rgba(255, 64, 0, 0.5))",
+          }}
+        />
 
         {/* Title */}
         <div
@@ -43,58 +61,62 @@ export async function GET() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            gap: 8,
           }}
         >
           <div
             style={{
-              fontSize: 48,
+              fontSize: 56,
               fontWeight: 700,
               color: "white",
-              marginBottom: 10,
+              letterSpacing: "-0.02em",
             }}
           >
-            Trust Ring Detector
+            Ethos Trust Check
           </div>
           <div
             style={{
-              fontSize: 24,
-              color: "#737373",
-              marginBottom: 40,
+              fontSize: 26,
+              color: "#a3a3a3",
+              marginBottom: 48,
             }}
           >
-            Ethos Network Collusion Analysis
+            Check reputation before vouching
           </div>
         </div>
 
-        {/* CTA */}
+        {/* CTA Button */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
-            padding: "16px 32px",
+            padding: "20px 48px",
             borderRadius: 16,
-            border: "2px solid #FF4000",
-            color: "#FF4000",
-            fontSize: 20,
-            fontWeight: 600,
+            background: "linear-gradient(135deg, #FF4000 0%, #ff6b35 100%)",
+            color: "white",
+            fontSize: 24,
+            fontWeight: 700,
+            boxShadow: "0 0 50px rgba(255, 64, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.3)",
           }}
         >
-          Enter a username to check their trust score
+          Open Mini App
         </div>
 
         {/* Footer */}
         <div
           style={{
             position: "absolute",
-            bottom: 30,
+            bottom: 40,
             display: "flex",
             alignItems: "center",
-            gap: 8,
+            gap: 12,
             color: "#525252",
-            fontSize: 16,
+            fontSize: 18,
           }}
         >
-          Built for Ethos Vibeathon
+          <span>Built for Ethos Vibeathon</span>
+          <span style={{ color: "#FF4000" }}>•</span>
+          <span>Powered by ethos-ts-sdk</span>
         </div>
       </div>
     ),
