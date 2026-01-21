@@ -766,7 +766,7 @@ export default function Home() {
                 <div className="flex-1 relative">
                   <input
                     type="text"
-                    placeholder="Enter X handle (e.g. serpin, VitalikButerin)"
+                    placeholder="Enter X handle (e.g. serpinxbt, VitalikButerin)"
                     value={searchQuery}
                     onChange={(e) => {
                       setSearchQuery(e.target.value);

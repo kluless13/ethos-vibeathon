@@ -208,7 +208,7 @@ export default function MiniApp() {
           <div className="flex-1 relative">
             <input
               type="text"
-              placeholder="Enter X handle (e.g. serpin, VitalikButerin)"
+              placeholder="Enter X handle (e.g. serpinxbt, VitalikButerin)"
               value={username}
               onChange={(e) => {
                 setUsername(e.target.value);
