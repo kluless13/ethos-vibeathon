@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const FRAME_BASE_URL = process.env.NEXT_PUBLIC_FRAME_URL || "https://ethos-trust-frame.vercel.app";
+const FRAME_BASE_URL = process.env.NEXT_PUBLIC_FRAME_URL || "https://ethos-vibeathon.vercel.app";
 
 export async function GET() {
   const html = `
