@@ -17,6 +17,13 @@ interface LocalProfile {
   profile_id: number;
   username: string | null;
   display_name: string | null;
+  ring_score: number;
+  cluster_score: number;
+  burst_score: number;
+  stake_score: number;
+  reciprocity_score: number;
+  composite_score: number;
+  risk_level: string;
 }
 
 const levelColors: Record<string, { color: string; bg: string; label: string }> = {
@@ -25,6 +32,14 @@ const levelColors: Record<string, { color: string; bg: string; label: string }> 
   neutral: { color: "#737373", bg: "rgba(115, 115, 115, 0.1)", label: "NEUTRAL" },
   questionable: { color: "#f97316", bg: "rgba(249, 115, 22, 0.1)", label: "QUESTIONABLE" },
   untrusted: { color: "#ef4444", bg: "rgba(239, 68, 68, 0.1)", label: "UNTRUSTED" },
+};
+
+const riskColors: Record<string, { color: string; bg: string; label: string; icon: string }> = {
+  critical: { color: "#ef4444", bg: "rgba(239, 68, 68, 0.1)", label: "CRITICAL", icon: "🚨" },
+  high: { color: "#f97316", bg: "rgba(249, 115, 22, 0.1)", label: "HIGH RISK", icon: "⚠️" },
+  medium: { color: "#eab308", bg: "rgba(234, 179, 8, 0.1)", label: "CAUTION", icon: "⚡" },
+  low: { color: "#3b82f6", bg: "rgba(59, 130, 246, 0.1)", label: "LOW RISK", icon: "ℹ️" },
+  minimal: { color: "#22c55e", bg: "rgba(34, 197, 94, 0.1)", label: "TRUSTED", icon: "✓" },
 };
 
 function AnimatedRing() {
@@ -103,6 +118,7 @@ export default function MiniApp() {
   const [username, setUsername] = useState("");
   const [loading, setLoading] = useState(false);
   const [profile, setProfile] = useState<EthosProfile | null>(null);
+  const [riskData, setRiskData] = useState<LocalProfile | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [localProfiles, setLocalProfiles] = useState<LocalProfile[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -143,6 +159,7 @@ export default function MiniApp() {
     setLoading(true);
     setError(null);
     setProfile(null);
+    setRiskData(null);
     setShowSuggestions(false);
 
     try {
@@ -155,12 +172,18 @@ export default function MiniApp() {
       }
 
       setProfile(data.profile);
+
+      // Find risk data from local profiles
+      const localMatch = localProfiles.find(
+        p => p.username?.toLowerCase() === query.toLowerCase()
+      );
+      setRiskData(localMatch || null);
     } catch {
       setError("Failed to fetch profile");
     } finally {
       setLoading(false);
     }
-  }, [username]);
+  }, [username, localProfiles]);
 
   const selectSuggestion = useCallback((suggestion: LocalProfile) => {
     setUsername(suggestion.username || "");
@@ -279,8 +302,8 @@ export default function MiniApp() {
 
       {/* Result */}
       {profile && !loading && (
-        <div className="rounded-2xl bg-zinc-900 border border-zinc-800 p-5 flex-1">
-          <div className="flex items-start justify-between mb-5">
+        <div className="rounded-2xl bg-zinc-900 border border-zinc-800 p-5 flex-1 overflow-y-auto">
+          <div className="flex items-start justify-between mb-4">
             <div className="text-xl font-bold">@{profile.username}</div>
             <div
               className="px-3 py-1 rounded-lg text-xs font-bold border"
@@ -294,38 +317,106 @@ export default function MiniApp() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-3 mb-5">
-            <div className="bg-zinc-800/50 rounded-xl p-4 text-center">
-              <div className="text-zinc-500 text-xs mb-1">Ethos Score</div>
+          {/* Ethos Stats */}
+          <div className="grid grid-cols-3 gap-2 mb-4">
+            <div className="bg-zinc-800/50 rounded-xl p-3 text-center">
+              <div className="text-zinc-500 text-[10px] mb-1">Ethos Score</div>
               <div
-                className="text-2xl font-bold"
+                className="text-xl font-bold"
                 style={{ color: levelColors[profile.scoreLevel]?.color }}
               >
                 {profile.score}
               </div>
-              <div className="text-zinc-600 text-xs">out of 2800</div>
             </div>
 
-            <div className="bg-zinc-800/50 rounded-xl p-4 text-center">
-              <div className="text-zinc-500 text-xs mb-1">Vouches</div>
-              <div className="text-2xl font-bold text-blue-500">
+            <div className="bg-zinc-800/50 rounded-xl p-3 text-center">
+              <div className="text-zinc-500 text-[10px] mb-1">Vouches</div>
+              <div className="text-xl font-bold text-blue-500">
                 {profile.vouchesReceived}
               </div>
-              <div className="text-zinc-600 text-xs">received</div>
             </div>
 
-            <div className="bg-zinc-800/50 rounded-xl p-4 text-center">
-              <div className="text-zinc-500 text-xs mb-1">ETH Staked</div>
-              <div className="text-2xl font-bold text-emerald-500">
+            <div className="bg-zinc-800/50 rounded-xl p-3 text-center">
+              <div className="text-zinc-500 text-[10px] mb-1">ETH Staked</div>
+              <div className="text-xl font-bold text-emerald-500">
                 {profile.ethStaked.toFixed(2)}
               </div>
-              <div className="text-zinc-600 text-xs">committed</div>
             </div>
           </div>
 
+          {/* Risk Analysis Section */}
+          {riskData ? (
+            <div className="mb-4">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-5 h-5">
+                  <AnimatedRing />
+                </div>
+                <span className="text-zinc-400 text-xs font-medium">COLLUSION RISK ANALYSIS</span>
+              </div>
+
+              {/* Risk Level Badge */}
+              <div
+                className="rounded-xl p-3 mb-3 border"
+                style={{
+                  backgroundColor: riskColors[riskData.risk_level]?.bg,
+                  borderColor: riskColors[riskData.risk_level]?.color,
+                }}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg">{riskColors[riskData.risk_level]?.icon}</span>
+                    <span
+                      className="font-bold text-sm"
+                      style={{ color: riskColors[riskData.risk_level]?.color }}
+                    >
+                      {riskColors[riskData.risk_level]?.label}
+                    </span>
+                  </div>
+                  <div
+                    className="text-2xl font-bold"
+                    style={{ color: riskColors[riskData.risk_level]?.color }}
+                  >
+                    {riskData.composite_score.toFixed(0)}
+                  </div>
+                </div>
+              </div>
+
+              {/* Individual Scores */}
+              <div className="grid grid-cols-5 gap-1 text-center">
+                <div className="bg-zinc-800/30 rounded-lg p-2">
+                  <div className="text-[9px] text-zinc-500">Rings</div>
+                  <div className="text-xs font-bold text-zinc-300">{riskData.ring_score.toFixed(0)}</div>
+                </div>
+                <div className="bg-zinc-800/30 rounded-lg p-2">
+                  <div className="text-[9px] text-zinc-500">Cluster</div>
+                  <div className="text-xs font-bold text-zinc-300">{riskData.cluster_score.toFixed(0)}</div>
+                </div>
+                <div className="bg-zinc-800/30 rounded-lg p-2">
+                  <div className="text-[9px] text-zinc-500">Burst</div>
+                  <div className="text-xs font-bold text-zinc-300">{riskData.burst_score.toFixed(0)}</div>
+                </div>
+                <div className="bg-zinc-800/30 rounded-lg p-2">
+                  <div className="text-[9px] text-zinc-500">Stake</div>
+                  <div className="text-xs font-bold text-zinc-300">{riskData.stake_score.toFixed(0)}</div>
+                </div>
+                <div className="bg-zinc-800/30 rounded-lg p-2">
+                  <div className="text-[9px] text-zinc-500">Recip</div>
+                  <div className="text-xs font-bold text-zinc-300">{riskData.reciprocity_score.toFixed(0)}</div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="mb-4 p-3 rounded-xl bg-zinc-800/30 border border-zinc-700/50">
+              <div className="flex items-center gap-2 text-zinc-500 text-xs">
+                <span>ℹ️</span>
+                <span>No collusion data available for this profile</span>
+              </div>
+            </div>
+          )}
+
           <button
             onClick={openEthosProfile}
-            className="w-full py-4 rounded-xl border border-[#FF4000] text-[#FF4000] font-semibold hover:bg-[#FF4000]/10 transition-colors"
+            className="w-full py-3 rounded-xl border border-[#FF4000] text-[#FF4000] font-semibold hover:bg-[#FF4000]/10 transition-colors text-sm"
           >
             View Full Profile on Ethos →
           </button>
