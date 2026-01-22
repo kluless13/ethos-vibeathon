@@ -1,0 +1,1973 @@
+{
+  "center": {
+    "id": 8,
+    "username": "serpinxbt",
+    "type": "center"
+  },
+  "outgoing": [
+    {
+      "target_id": 44174,
+      "target_username": "44174",
+      "timestamp": "2025-11-25",
+      "balance_eth": 1.0033
+    },
+    {
+      "target_id": 36880,
+      "target_username": "rzadigital",
+      "timestamp": "2025-11-21",
+      "balance_eth": 0.2008
+    },
+    {
+      "target_id": 2243,
+      "target_username": "sol_foxie",
+      "timestamp": "2025-09-26",
+      "balance_eth": 0.0102
+    },
+    {
+      "target_id": 30122,
+      "target_username": "frankdegods",
+      "timestamp": "2025-09-26",
+      "balance_eth": 0.2997
+    },
+    {
+      "target_id": 12938,
+      "target_username": "crypto_condom",
+      "timestamp": "2025-09-26",
+      "balance_eth": 0.025
+    },
+    {
+      "target_id": 36892,
+      "target_username": "ActionModelAI",
+      "timestamp": "2025-09-24",
+      "balance_eth": 0.0263
+    },
+    {
+      "target_id": 19,
+      "target_username": "icobeast",
+      "timestamp": "2025-09-24",
+      "balance_eth": 0.0251
+    },
+    {
+      "target_id": 6680,
+      "target_username": "0xJohannes_",
+      "timestamp": "2025-09-24",
+      "balance_eth": 0.025
+    },
+    {
+      "target_id": 3847,
+      "target_username": "beezie_io",
+      "timestamp": "2025-09-12",
+      "balance_eth": 0.01
+    },
+    {
+      "target_id": 15,
+      "target_username": "buz_eth",
+      "timestamp": "2025-08-06",
+      "balance_eth": 0.2508
+    },
+    {
+      "target_id": 4097,
+      "target_username": "Sk0rpETH",
+      "timestamp": "2025-08-06",
+      "balance_eth": 0.103
+    },
+    {
+      "target_id": 580,
+      "target_username": "erosAgent",
+      "timestamp": "2025-08-06",
+      "balance_eth": 0.0
+    },
+    {
+      "target_id": 82,
+      "target_username": "Polymarket",
+      "timestamp": "2025-07-17",
+      "balance_eth": 0.1532
+    },
+    {
+      "target_id": 3668,
+      "target_username": "publius_val",
+      "timestamp": "2025-07-15",
+      "balance_eth": 0.1036
+    },
+    {
+      "target_id": 124,
+      "target_username": "quadwitch",
+      "timestamp": "2025-07-01",
+      "balance_eth": 0.0502
+    },
+    {
+      "target_id": 751,
+      "target_username": "PapaDari_",
+      "timestamp": "2025-06-24",
+      "balance_eth": 0.02
+    },
+    {
+      "target_id": 866,
+      "target_username": "kairosAgent",
+      "timestamp": "2025-06-17",
+      "balance_eth": 0.15
+    },
+    {
+      "target_id": 4033,
+      "target_username": "dethective",
+      "timestamp": "2025-06-06",
+      "balance_eth": 0.2512
+    },
+    {
+      "target_id": 2037,
+      "target_username": "0x_ultra",
+      "timestamp": "2025-05-15",
+      "balance_eth": 0.2596
+    },
+    {
+      "target_id": 1266,
+      "target_username": "PedroFounder",
+      "timestamp": "2025-05-15",
+      "balance_eth": 0.0513
+    },
+    {
+      "target_id": 6205,
+      "target_username": "VannaCharmer",
+      "timestamp": "2025-05-15",
+      "balance_eth": 0.102
+    },
+    {
+      "target_id": 1432,
+      "target_username": "PremiumSaltine_",
+      "timestamp": "2025-05-08",
+      "balance_eth": 0.0523
+    },
+    {
+      "target_id": 3092,
+      "target_username": "alpha_co",
+      "timestamp": "2025-04-15",
+      "balance_eth": 0.021
+    },
+    {
+      "target_id": 1706,
+      "target_username": "GreenMan13XYZ",
+      "timestamp": "2025-04-11",
+      "balance_eth": 0.0
+    },
+    {
+      "target_id": 1964,
+      "target_username": "seanbonner",
+      "timestamp": "2025-04-03",
+      "balance_eth": 0.0253
+    },
+    {
+      "target_id": 1126,
+      "target_username": "__MLO_",
+      "timestamp": "2025-03-30",
+      "balance_eth": 0.0512
+    },
+    {
+      "target_id": 2011,
+      "target_username": "bryanbrinkman",
+      "timestamp": "2025-03-29",
+      "balance_eth": 0.0505
+    },
+    {
+      "target_id": 3578,
+      "target_username": "juliezize",
+      "timestamp": "2025-03-28",
+      "balance_eth": 0.0546
+    },
+    {
+      "target_id": 4584,
+      "target_username": "truemarkets",
+      "timestamp": "2025-03-17",
+      "balance_eth": 0.0
+    },
+    {
+      "target_id": 10,
+      "target_username": "zetaonchain",
+      "timestamp": "2025-03-01",
+      "balance_eth": 0.0525
+    },
+    {
+      "target_id": 2816,
+      "target_username": "notthreadguy",
+      "timestamp": "2025-03-01",
+      "balance_eth": 0.5243
+    },
+    {
+      "target_id": 298,
+      "target_username": "dragossden",
+      "timestamp": "2025-02-25",
+      "balance_eth": 0.2909
+    },
+    {
+      "target_id": 125,
+      "target_username": "Poppa626",
+      "timestamp": "2025-02-20",
+      "balance_eth": 0.3276
+    },
+    {
+      "target_id": 464,
+      "target_username": "zimmerallday",
+      "timestamp": "2025-02-16",
+      "balance_eth": 0.2588
+    },
+    {
+      "target_id": 1235,
+      "target_username": "wardaddycapital",
+      "timestamp": "2025-02-16",
+      "balance_eth": 0.0101
+    },
+    {
+      "target_id": 1372,
+      "target_username": "bholu_eth",
+      "timestamp": "2025-02-16",
+      "balance_eth": 0.2558
+    },
+    {
+      "target_id": 816,
+      "target_username": "fern",
+      "timestamp": "2025-02-13",
+      "balance_eth": 0.2624
+    },
+    {
+      "target_id": 1228,
+      "target_username": "sassal0x",
+      "timestamp": "2025-02-11",
+      "balance_eth": 1.0009
+    },
+    {
+      "target_id": 52,
+      "target_username": "imjameshall",
+      "timestamp": "2025-02-11",
+      "balance_eth": 0.2521
+    },
+    {
+      "target_id": 2,
+      "target_username": "porkbus",
+      "timestamp": "2025-02-05",
+      "balance_eth": 0.7633
+    },
+    {
+      "target_id": 1006,
+      "target_username": "cubsfanabc",
+      "timestamp": "2025-02-04",
+      "balance_eth": 0.4581
+    },
+    {
+      "target_id": 1405,
+      "target_username": "Rico_Mueller",
+      "timestamp": "2025-02-03",
+      "balance_eth": 0.25
+    },
+    {
+      "target_id": 1191,
+      "target_username": "wingkingeth",
+      "timestamp": "2025-01-31",
+      "balance_eth": 0.2736
+    },
+    {
+      "target_id": 646,
+      "target_username": "DeanoXBT",
+      "timestamp": "2025-01-31",
+      "balance_eth": 0.5979
+    },
+    {
+      "target_id": 1119,
+      "target_username": "somaxbt",
+      "timestamp": "2025-01-28",
+      "balance_eth": 0.1002
+    },
+    {
+      "target_id": 1017,
+      "target_username": "WazzCrypto",
+      "timestamp": "2025-01-28",
+      "balance_eth": 1.0254
+    },
+    {
+      "target_id": 107,
+      "target_username": "oksajeth",
+      "timestamp": "2025-01-28",
+      "balance_eth": 0.0311
+    },
+    {
+      "target_id": 443,
+      "target_username": "iamdiarrhoea",
+      "timestamp": "2025-01-28",
+      "balance_eth": 0.4137
+    },
+    {
+      "target_id": 37,
+      "target_username": "hildobby",
+      "timestamp": "2025-01-27",
+      "balance_eth": 0.2527
+    },
+    {
+      "target_id": 1004,
+      "target_username": "WickdNFT",
+      "timestamp": "2025-01-27",
+      "balance_eth": 0.2608
+    },
+    {
+      "target_id": 7,
+      "target_username": "adipilla8708",
+      "timestamp": "2025-01-27",
+      "balance_eth": 0.2523
+    },
+    {
+      "target_id": 755,
+      "target_username": "Zeneca",
+      "timestamp": "2025-01-26",
+      "balance_eth": 0.5223
+    },
+    {
+      "target_id": 1051,
+      "target_username": "0xQuit",
+      "timestamp": "2025-01-26",
+      "balance_eth": 0.252
+    },
+    {
+      "target_id": 1010,
+      "target_username": "hunterorrell",
+      "timestamp": "2025-01-25",
+      "balance_eth": 0.5
+    },
+    {
+      "target_id": 891,
+      "target_username": "Punk9277",
+      "timestamp": "2025-01-25",
+      "balance_eth": 0.0
+    },
+    {
+      "target_id": 186,
+      "target_username": "Rhynotic",
+      "timestamp": "2025-01-25",
+      "balance_eth": 0.254
+    },
+    {
+      "target_id": 473,
+      "target_username": "0xMakesy",
+      "timestamp": "2025-01-24",
+      "balance_eth": 0.5213
+    },
+    {
+      "target_id": 189,
+      "target_username": "gremplin",
+      "timestamp": "2025-01-24",
+      "balance_eth": 0.2545
+    },
+    {
+      "target_id": 28,
+      "target_username": "710_eth",
+      "timestamp": "2025-01-24",
+      "balance_eth": 0.1625
+    },
+    {
+      "target_id": 744,
+      "target_username": "blindsquirrelx",
+      "timestamp": "2025-01-24",
+      "balance_eth": 0.1041
+    },
+    {
+      "target_id": 898,
+      "target_username": "aixbt_agent",
+      "timestamp": "2025-01-24",
+      "balance_eth": 0.0
+    },
+    {
+      "target_id": 302,
+      "target_username": "ethosAgent",
+      "timestamp": "2025-01-24",
+      "balance_eth": 0.2512
+    },
+    {
+      "target_id": 1,
+      "target_username": "ethos_network",
+      "timestamp": "2025-01-24",
+      "balance_eth": 1.062
+    },
+    {
+      "target_id": 733,
+      "target_username": "batsoupyum",
+      "timestamp": "2025-01-24",
+      "balance_eth": 0.15
+    },
+    {
+      "target_id": 201,
+      "target_username": "Youclidean",
+      "timestamp": "2025-01-24",
+      "balance_eth": 0.2573
+    },
+    {
+      "target_id": 467,
+      "target_username": "krybharat",
+      "timestamp": "2025-01-24",
+      "balance_eth": 0.2586
+    },
+    {
+      "target_id": 20,
+      "target_username": "zp_land",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.2648
+    },
+    {
+      "target_id": 13,
+      "target_username": "fillip_g",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.1141
+    },
+    {
+      "target_id": 162,
+      "target_username": "izebel_eth",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.1201
+    },
+    {
+      "target_id": 6,
+      "target_username": "BlueChilliZero",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.3206
+    },
+    {
+      "target_id": 9,
+      "target_username": "0xak_",
+      "timestamp": "2025-01-23",
+      "balance_eth": 1.0583
+    },
+    {
+      "target_id": 17,
+      "target_username": "eskacie",
+      "timestamp": "2025-01-23",
+      "balance_eth": 2.0711
+    }
+  ],
+  "incoming": [
+    {
+      "source_id": 43197,
+      "source_username": "Cryp70n1t3v2",
+      "timestamp": "2025-12-23",
+      "balance_eth": 0.015
+    },
+    {
+      "source_id": 16516,
+      "source_username": "Whitelist1Media",
+      "timestamp": "2025-12-14",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 3007,
+      "source_username": "Walshy_Eth",
+      "timestamp": "2025-12-13",
+      "balance_eth": 0.025
+    },
+    {
+      "source_id": 9500,
+      "source_username": "0x__Step",
+      "timestamp": "2025-12-11",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 4033,
+      "source_username": "dethective",
+      "timestamp": "2025-11-23",
+      "balance_eth": 0.1
+    },
+    {
+      "source_id": 30509,
+      "source_username": "0xemkey",
+      "timestamp": "2025-11-21",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 28338,
+      "source_username": "nodrogelo",
+      "timestamp": "2025-11-15",
+      "balance_eth": 0.0201
+    },
+    {
+      "source_id": 33671,
+      "source_username": "AmEs1buk",
+      "timestamp": "2025-11-14",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 38893,
+      "source_username": "rashelsh_",
+      "timestamp": "2025-11-09",
+      "balance_eth": 0.011
+    },
+    {
+      "source_id": 30820,
+      "source_username": "shomaredo",
+      "timestamp": "2025-11-09",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 39785,
+      "source_username": "bryptobricks",
+      "timestamp": "2025-11-05",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 39775,
+      "source_username": "wiziswiz",
+      "timestamp": "2025-11-05",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 11046,
+      "source_username": "merts_eth",
+      "timestamp": "2025-11-04",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 28496,
+      "source_username": "ghosterbycpitm",
+      "timestamp": "2025-10-31",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 12973,
+      "source_username": "keii_yong",
+      "timestamp": "2025-10-30",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 21737,
+      "source_username": "azrimkbr",
+      "timestamp": "2025-10-28",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 41320,
+      "source_username": "badmonft",
+      "timestamp": "2025-10-27",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 40194,
+      "source_username": "lexrumx",
+      "timestamp": "2025-10-26",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 1233,
+      "source_username": "yoobii3",
+      "timestamp": "2025-10-23",
+      "balance_eth": 0.1701
+    },
+    {
+      "source_id": 40423,
+      "source_username": "evm_based",
+      "timestamp": "2025-10-21",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 26856,
+      "source_username": "YadgarBtc",
+      "timestamp": "2025-10-19",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 30257,
+      "source_username": "naserya10",
+      "timestamp": "2025-10-19",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 15627,
+      "source_username": "0x3aeed",
+      "timestamp": "2025-10-18",
+      "balance_eth": 0.0147
+    },
+    {
+      "source_id": 20356,
+      "source_username": "ElinTekin5",
+      "timestamp": "2025-10-15",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 5874,
+      "source_username": "BetmanJoe",
+      "timestamp": "2025-10-14",
+      "balance_eth": 0.015
+    },
+    {
+      "source_id": 38369,
+      "source_username": "eeeexcvnkk",
+      "timestamp": "2025-10-09",
+      "balance_eth": 0.0293
+    },
+    {
+      "source_id": 30122,
+      "source_username": "frankdegods",
+      "timestamp": "2025-10-09",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 22339,
+      "source_username": "FrankoYodaa",
+      "timestamp": "2025-10-08",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 11982,
+      "source_username": "nahnah64",
+      "timestamp": "2025-10-07",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 31136,
+      "source_username": "Molip_xd01",
+      "timestamp": "2025-10-05",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 5577,
+      "source_username": "1ncrypto",
+      "timestamp": "2025-10-04",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 118,
+      "source_username": "dad3865",
+      "timestamp": "2025-10-04",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 26432,
+      "source_username": "SaeedRTL",
+      "timestamp": "2025-10-03",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 8519,
+      "source_username": "TAhmed93",
+      "timestamp": "2025-10-02",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 20962,
+      "source_username": "sashawhiteee",
+      "timestamp": "2025-10-01",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 32782,
+      "source_username": "degenyok",
+      "timestamp": "2025-09-29",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 1618,
+      "source_username": "osamafaheemm",
+      "timestamp": "2025-09-28",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 13782,
+      "source_username": "cristixbot",
+      "timestamp": "2025-09-27",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 15434,
+      "source_username": "MELOWILD",
+      "timestamp": "2025-09-26",
+      "balance_eth": 0.025
+    },
+    {
+      "source_id": 24019,
+      "source_username": "50tapanna",
+      "timestamp": "2025-09-24",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 30368,
+      "source_username": "0xBlockReporter",
+      "timestamp": "2025-09-24",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 15660,
+      "source_username": "0xgunboats",
+      "timestamp": "2025-09-22",
+      "balance_eth": 0.02
+    },
+    {
+      "source_id": 23887,
+      "source_username": "MoonSHAY4",
+      "timestamp": "2025-09-22",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 34798,
+      "source_username": "0xSindermann",
+      "timestamp": "2025-09-16",
+      "balance_eth": 0.1503
+    },
+    {
+      "source_id": 34707,
+      "source_username": "MeryIgnatenko",
+      "timestamp": "2025-09-15",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 4097,
+      "source_username": "Sk0rpETH",
+      "timestamp": "2025-09-14",
+      "balance_eth": 0.02
+    },
+    {
+      "source_id": 27129,
+      "source_username": "kar4arodon",
+      "timestamp": "2025-09-14",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 17917,
+      "source_username": "mertfeo",
+      "timestamp": "2025-09-05",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 15172,
+      "source_username": "0xCragHack",
+      "timestamp": "2025-09-05",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 13830,
+      "source_username": "0xAybars",
+      "timestamp": "2025-09-04",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 15069,
+      "source_username": "1sn4o",
+      "timestamp": "2025-09-02",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 20872,
+      "source_username": "NQCiao",
+      "timestamp": "2025-09-01",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 11983,
+      "source_username": "AdeXBT",
+      "timestamp": "2025-08-30",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 16848,
+      "source_username": "workinpro",
+      "timestamp": "2025-08-28",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 15530,
+      "source_username": "onderyazici",
+      "timestamp": "2025-08-27",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 19495,
+      "source_username": "onlycrypto_0",
+      "timestamp": "2025-08-26",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 26534,
+      "source_username": "alazyilmaz3519",
+      "timestamp": "2025-08-26",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 17945,
+      "source_username": "web3_manny",
+      "timestamp": "2025-08-25",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 14905,
+      "source_username": "guezito",
+      "timestamp": "2025-08-24",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 28026,
+      "source_username": "ali_rezaeian73",
+      "timestamp": "2025-08-23",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 2187,
+      "source_username": "MutantMatt0x",
+      "timestamp": "2025-08-23",
+      "balance_eth": 0.2076
+    },
+    {
+      "source_id": 19495,
+      "source_username": "onlycrypto_0",
+      "timestamp": "2025-08-21",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 20833,
+      "source_username": "bullrungenius",
+      "timestamp": "2025-08-21",
+      "balance_eth": 0.0201
+    },
+    {
+      "source_id": 29248,
+      "source_username": "daicahamo_1997",
+      "timestamp": "2025-08-20",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 4097,
+      "source_username": "Sk0rpETH",
+      "timestamp": "2025-08-18",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 23560,
+      "source_username": "sterhcrypto",
+      "timestamp": "2025-08-16",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 15069,
+      "source_username": "1sn4o",
+      "timestamp": "2025-08-14",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 26348,
+      "source_username": "sh1vvvvv",
+      "timestamp": "2025-08-13",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 25912,
+      "source_username": "LinarKhal",
+      "timestamp": "2025-08-06",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 25719,
+      "source_username": "sanyalyange",
+      "timestamp": "2025-08-06",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 25719,
+      "source_username": "sanyalyange",
+      "timestamp": "2025-08-05",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 25078,
+      "source_username": "arfffvxn",
+      "timestamp": "2025-08-01",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 21357,
+      "source_username": "DevVet",
+      "timestamp": "2025-07-27",
+      "balance_eth": 0.01
+    },
+    {
+      "source_id": 24120,
+      "source_username": "Magicianafk",
+      "timestamp": "2025-07-26",
+      "balance_eth": 0.0151
+    },
+    {
+      "source_id": 18990,
+      "source_username": "SendMyBags",
+      "timestamp": "2025-07-21",
+      "balance_eth": 0.0206
+    },
+    {
+      "source_id": 24511,
+      "source_username": "kostya279079301",
+      "timestamp": "2025-07-20",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 21768,
+      "source_username": "prokopkor",
+      "timestamp": "2025-07-18",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 24120,
+      "source_username": "Magicianafk",
+      "timestamp": "2025-07-18",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 21055,
+      "source_username": "simbiryakov",
+      "timestamp": "2025-07-17",
+      "balance_eth": 0.0105
+    },
+    {
+      "source_id": 17158,
+      "source_username": "_omgnicklachey",
+      "timestamp": "2025-07-17",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 22273,
+      "source_username": "Rittick24",
+      "timestamp": "2025-07-14",
+      "balance_eth": 0.0103
+    },
+    {
+      "source_id": 22722,
+      "source_username": "totomal090202",
+      "timestamp": "2025-07-12",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 2352,
+      "source_username": "ashen_one",
+      "timestamp": "2025-07-11",
+      "balance_eth": 0.0103
+    },
+    {
+      "source_id": 16658,
+      "source_username": "fhn_gt",
+      "timestamp": "2025-07-04",
+      "balance_eth": 0.0103
+    },
+    {
+      "source_id": 20895,
+      "source_username": "dotferno",
+      "timestamp": "2025-07-04",
+      "balance_eth": 0.0104
+    },
+    {
+      "source_id": 1749,
+      "source_username": "0xKaytee_",
+      "timestamp": "2025-07-04",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 16755,
+      "source_username": "sirwardhana",
+      "timestamp": "2025-07-02",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 18723,
+      "source_username": "0xLegendz_",
+      "timestamp": "2025-07-01",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 2355,
+      "source_username": "dutchdecrypto",
+      "timestamp": "2025-06-28",
+      "balance_eth": 0.0103
+    },
+    {
+      "source_id": 18989,
+      "source_username": "MrNeverPullsOut",
+      "timestamp": "2025-06-28",
+      "balance_eth": 0.1033
+    },
+    {
+      "source_id": 4470,
+      "source_username": "Solofunk",
+      "timestamp": "2025-06-26",
+      "balance_eth": 0.0103
+    },
+    {
+      "source_id": 12702,
+      "source_username": "Elminselimov5",
+      "timestamp": "2025-06-26",
+      "balance_eth": 0.0103
+    },
+    {
+      "source_id": 6413,
+      "source_username": "smartek",
+      "timestamp": "2025-06-24",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 7922,
+      "source_username": "chainpilot_x",
+      "timestamp": "2025-06-22",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 133,
+      "source_username": "BdgeScott",
+      "timestamp": "2025-06-19",
+      "balance_eth": 0.0103
+    },
+    {
+      "source_id": 7883,
+      "source_username": "yueya_eth",
+      "timestamp": "2025-06-18",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 12232,
+      "source_username": "tailai99",
+      "timestamp": "2025-06-15",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 16261,
+      "source_username": "leftvy",
+      "timestamp": "2025-06-15",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 5273,
+      "source_username": "Jampzey",
+      "timestamp": "2025-06-12",
+      "balance_eth": 0.1035
+    },
+    {
+      "source_id": 15188,
+      "source_username": "lizard_capital",
+      "timestamp": "2025-06-11",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1051,
+      "source_username": "0xQuit",
+      "timestamp": "2025-06-10",
+      "balance_eth": 0.2595
+    },
+    {
+      "source_id": 10771,
+      "source_username": "0xparsaa",
+      "timestamp": "2025-05-31",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 288,
+      "source_username": "thegolden_eel",
+      "timestamp": "2025-05-25",
+      "balance_eth": 0.0104
+    },
+    {
+      "source_id": 12192,
+      "source_username": "dxdong1211",
+      "timestamp": "2025-05-24",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1017,
+      "source_username": "WazzCrypto",
+      "timestamp": "2025-05-23",
+      "balance_eth": 0.1039
+    },
+    {
+      "source_id": 5787,
+      "source_username": "yarj0x",
+      "timestamp": "2025-05-23",
+      "balance_eth": 0.0104
+    },
+    {
+      "source_id": 8079,
+      "source_username": "mybmwclub",
+      "timestamp": "2025-05-19",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 10,
+      "source_username": "zetaonchain",
+      "timestamp": "2025-05-19",
+      "balance_eth": 0.052
+    },
+    {
+      "source_id": 49,
+      "source_username": "camargitron",
+      "timestamp": "2025-05-15",
+      "balance_eth": 0.0312
+    },
+    {
+      "source_id": 9951,
+      "source_username": "seKoS0L",
+      "timestamp": "2025-05-15",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1266,
+      "source_username": "PedroFounder",
+      "timestamp": "2025-05-15",
+      "balance_eth": 0.052
+    },
+    {
+      "source_id": 4394,
+      "source_username": "crazino87",
+      "timestamp": "2025-05-14",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 730,
+      "source_username": "miro_kirov",
+      "timestamp": "2025-05-13",
+      "balance_eth": 0.104
+    },
+    {
+      "source_id": 4097,
+      "source_username": "Sk0rpETH",
+      "timestamp": "2025-05-13",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 8378,
+      "source_username": "0xBeyondLee",
+      "timestamp": "2025-05-05",
+      "balance_eth": 0.0104
+    },
+    {
+      "source_id": 6848,
+      "source_username": "0xVanxyrus",
+      "timestamp": "2025-05-03",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 8081,
+      "source_username": "MaxCryptoSpace",
+      "timestamp": "2025-04-24",
+      "balance_eth": 0.0208
+    },
+    {
+      "source_id": 8103,
+      "source_username": "CryptoPainter",
+      "timestamp": "2025-04-22",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 3708,
+      "source_username": "g3rmxyz",
+      "timestamp": "2025-04-22",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 7624,
+      "source_username": "punkcan",
+      "timestamp": "2025-04-21",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1432,
+      "source_username": "PremiumSaltine_",
+      "timestamp": "2025-04-19",
+      "balance_eth": 0.052
+    },
+    {
+      "source_id": 7744,
+      "source_username": "drakeondigital",
+      "timestamp": "2025-04-17",
+      "balance_eth": 0.0104
+    },
+    {
+      "source_id": 7374,
+      "source_username": "tokenbrother",
+      "timestamp": "2025-04-17",
+      "balance_eth": 0.0104
+    },
+    {
+      "source_id": 7421,
+      "source_username": "dremondeth",
+      "timestamp": "2025-04-16",
+      "balance_eth": 0.0104
+    },
+    {
+      "source_id": 6275,
+      "source_username": "Rubywang",
+      "timestamp": "2025-04-14",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 7346,
+      "source_username": "wang_xiaolou",
+      "timestamp": "2025-04-14",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 3440,
+      "source_username": "DragoXBT",
+      "timestamp": "2025-04-03",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 466,
+      "source_username": "HollanderAdam",
+      "timestamp": "2025-04-02",
+      "balance_eth": 0.052
+    },
+    {
+      "source_id": 5689,
+      "source_username": "0xCopyright_eth",
+      "timestamp": "2025-03-30",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1126,
+      "source_username": "__MLO_",
+      "timestamp": "2025-03-30",
+      "balance_eth": 0.0521
+    },
+    {
+      "source_id": 5735,
+      "source_username": "casperdefi",
+      "timestamp": "2025-03-30",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 3630,
+      "source_username": "stellarobject1",
+      "timestamp": "2025-03-27",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 5226,
+      "source_username": "MacroWang007",
+      "timestamp": "2025-03-25",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 4394,
+      "source_username": "crazino87",
+      "timestamp": "2025-03-25",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 5260,
+      "source_username": "Hydraze420",
+      "timestamp": "2025-03-25",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 2215,
+      "source_username": "nix_eth",
+      "timestamp": "2025-03-24",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 2034,
+      "source_username": "katexbt",
+      "timestamp": "2025-03-24",
+      "balance_eth": 0.0104
+    },
+    {
+      "source_id": 2408,
+      "source_username": "BR4ted",
+      "timestamp": "2025-03-23",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 5273,
+      "source_username": "Jampzey",
+      "timestamp": "2025-03-23",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 3229,
+      "source_username": "KenWattana",
+      "timestamp": "2025-03-21",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 2265,
+      "source_username": "BoltXBT",
+      "timestamp": "2025-03-21",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 4963,
+      "source_username": "toady_hawk",
+      "timestamp": "2025-03-20",
+      "balance_eth": 0.0104
+    },
+    {
+      "source_id": 4681,
+      "source_username": "pgreyy",
+      "timestamp": "2025-03-18",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 4211,
+      "source_username": "crypto_dago",
+      "timestamp": "2025-03-18",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 3814,
+      "source_username": "EverythingB0x",
+      "timestamp": "2025-03-17",
+      "balance_eth": 0.0104
+    },
+    {
+      "source_id": 2527,
+      "source_username": "RaAres",
+      "timestamp": "2025-03-16",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1388,
+      "source_username": "deejayrips",
+      "timestamp": "2025-03-14",
+      "balance_eth": 0.0522
+    },
+    {
+      "source_id": 3019,
+      "source_username": "Cos0x",
+      "timestamp": "2025-03-11",
+      "balance_eth": 0.0104
+    },
+    {
+      "source_id": 61,
+      "source_username": "nodexbt",
+      "timestamp": "2025-03-11",
+      "balance_eth": 0.0522
+    },
+    {
+      "source_id": 3596,
+      "source_username": "EEEEdison1992",
+      "timestamp": "2025-03-10",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1923,
+      "source_username": "emmitt_art",
+      "timestamp": "2025-03-09",
+      "balance_eth": 0.0105
+    },
+    {
+      "source_id": 186,
+      "source_username": "Rhynotic",
+      "timestamp": "2025-03-08",
+      "balance_eth": 0.0261
+    },
+    {
+      "source_id": 52,
+      "source_username": "imjameshall",
+      "timestamp": "2025-03-07",
+      "balance_eth": 0.1045
+    },
+    {
+      "source_id": 274,
+      "source_username": "Ready4Heady",
+      "timestamp": "2025-03-06",
+      "balance_eth": 0.0105
+    },
+    {
+      "source_id": 3278,
+      "source_username": "LunarStrategy",
+      "timestamp": "2025-03-05",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 3073,
+      "source_username": "DoggfatherCrew",
+      "timestamp": "2025-03-04",
+      "balance_eth": 0.0105
+    },
+    {
+      "source_id": 3064,
+      "source_username": "irmelvin",
+      "timestamp": "2025-03-03",
+      "balance_eth": 0.5233
+    },
+    {
+      "source_id": 202,
+      "source_username": "JakeAndBakeMVHQ",
+      "timestamp": "2025-03-03",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 2116,
+      "source_username": "0xAbhiP",
+      "timestamp": "2025-03-03",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1917,
+      "source_username": "chadstrdaumus0",
+      "timestamp": "2025-03-02",
+      "balance_eth": 0.0105
+    },
+    {
+      "source_id": 3078,
+      "source_username": "eth_apple",
+      "timestamp": "2025-03-02",
+      "balance_eth": 0.0525
+    },
+    {
+      "source_id": 1706,
+      "source_username": "GreenMan13XYZ",
+      "timestamp": "2025-03-02",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 3007,
+      "source_username": "Walshy_Eth",
+      "timestamp": "2025-03-02",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 2307,
+      "source_username": "onchainmo",
+      "timestamp": "2025-03-01",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 201,
+      "source_username": "Youclidean",
+      "timestamp": "2025-03-01",
+      "balance_eth": 0.0105
+    },
+    {
+      "source_id": 709,
+      "source_username": "CirrusNFT",
+      "timestamp": "2025-03-01",
+      "balance_eth": 0.2102
+    },
+    {
+      "source_id": 77,
+      "source_username": "Shatt_Eth",
+      "timestamp": "2025-02-28",
+      "balance_eth": 0.1565
+    },
+    {
+      "source_id": 1384,
+      "source_username": "CoacherJD",
+      "timestamp": "2025-02-28",
+      "balance_eth": 0.0105
+    },
+    {
+      "source_id": 1778,
+      "source_username": "Legendaryy",
+      "timestamp": "2025-02-28",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 2779,
+      "source_username": "MeltedMindz",
+      "timestamp": "2025-02-27",
+      "balance_eth": 0.0526
+    },
+    {
+      "source_id": 451,
+      "source_username": "jrugss",
+      "timestamp": "2025-02-27",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 2049,
+      "source_username": "CyphrGM",
+      "timestamp": "2025-02-27",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 2608,
+      "source_username": "mrfred",
+      "timestamp": "2025-02-26",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 883,
+      "source_username": "tnuttin1",
+      "timestamp": "2025-02-26",
+      "balance_eth": 0.1053
+    },
+    {
+      "source_id": 1802,
+      "source_username": "Tuteth_",
+      "timestamp": "2025-02-26",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 2161,
+      "source_username": "Cashbinoo",
+      "timestamp": "2025-02-26",
+      "balance_eth": 0.0106
+    },
+    {
+      "source_id": 158,
+      "source_username": "sighduck",
+      "timestamp": "2025-02-26",
+      "balance_eth": 0.0106
+    },
+    {
+      "source_id": 28,
+      "source_username": "710_eth",
+      "timestamp": "2025-02-25",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 2003,
+      "source_username": "KeepCalmNdChill",
+      "timestamp": "2025-02-24",
+      "balance_eth": 0.0528
+    },
+    {
+      "source_id": 1010,
+      "source_username": "hunterorrell",
+      "timestamp": "2025-02-24",
+      "balance_eth": 0.0106
+    },
+    {
+      "source_id": 1163,
+      "source_username": "bread_treats",
+      "timestamp": "2025-02-24",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 298,
+      "source_username": "dragossden",
+      "timestamp": "2025-02-24",
+      "balance_eth": 1.0537
+    },
+    {
+      "source_id": 2205,
+      "source_username": "BoratXBT",
+      "timestamp": "2025-02-24",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1293,
+      "source_username": "giamdox",
+      "timestamp": "2025-02-23",
+      "balance_eth": 0.0107
+    },
+    {
+      "source_id": 2106,
+      "source_username": "PixOnChain",
+      "timestamp": "2025-02-23",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 2031,
+      "source_username": "0xSammy",
+      "timestamp": "2025-02-23",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1002,
+      "source_username": "MarkyMarkETH",
+      "timestamp": "2025-02-23",
+      "balance_eth": 0.0118
+    },
+    {
+      "source_id": 1919,
+      "source_username": "mintface",
+      "timestamp": "2025-02-22",
+      "balance_eth": 0.0214
+    },
+    {
+      "source_id": 1978,
+      "source_username": "thatguyintech",
+      "timestamp": "2025-02-21",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1903,
+      "source_username": "TheBigggggggg",
+      "timestamp": "2025-02-21",
+      "balance_eth": 0.0107
+    },
+    {
+      "source_id": 125,
+      "source_username": "Poppa626",
+      "timestamp": "2025-02-20",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1769,
+      "source_username": "NonFungibleBean",
+      "timestamp": "2025-02-20",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 145,
+      "source_username": "JJangBang429",
+      "timestamp": "2025-02-19",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1834,
+      "source_username": "SethA1982",
+      "timestamp": "2025-02-18",
+      "balance_eth": 0.0107
+    },
+    {
+      "source_id": 1751,
+      "source_username": "Carlitoswa_y",
+      "timestamp": "2025-02-18",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1711,
+      "source_username": "Shaggy6529",
+      "timestamp": "2025-02-18",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1813,
+      "source_username": "mannay",
+      "timestamp": "2025-02-18",
+      "balance_eth": 0.0107
+    },
+    {
+      "source_id": 1715,
+      "source_username": "TheCarpenter",
+      "timestamp": "2025-02-18",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 74,
+      "source_username": "aventurine_eth",
+      "timestamp": "2025-02-17",
+      "balance_eth": 0.0107
+    },
+    {
+      "source_id": 1150,
+      "source_username": "peceka",
+      "timestamp": "2025-02-16",
+      "balance_eth": 0.0652
+    },
+    {
+      "source_id": 1126,
+      "source_username": "__MLO_",
+      "timestamp": "2025-02-16",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1624,
+      "source_username": "DrJones0305",
+      "timestamp": "2025-02-16",
+      "balance_eth": 0.2148
+    },
+    {
+      "source_id": 1697,
+      "source_username": "BradBuilds",
+      "timestamp": "2025-02-16",
+      "balance_eth": 0.1075
+    },
+    {
+      "source_id": 1749,
+      "source_username": "0xKaytee_",
+      "timestamp": "2025-02-16",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1733,
+      "source_username": "secr3t_aardvark",
+      "timestamp": "2025-02-16",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1714,
+      "source_username": "JoeDiGiovanni7",
+      "timestamp": "2025-02-16",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1628,
+      "source_username": "gcchaps",
+      "timestamp": "2025-02-14",
+      "balance_eth": 0.0108
+    },
+    {
+      "source_id": 1235,
+      "source_username": "wardaddycapital",
+      "timestamp": "2025-02-13",
+      "balance_eth": 0.0108
+    },
+    {
+      "source_id": 1119,
+      "source_username": "somaxbt",
+      "timestamp": "2025-02-10",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1460,
+      "source_username": "mdesim01",
+      "timestamp": "2025-02-05",
+      "balance_eth": 0.2698
+    },
+    {
+      "source_id": 816,
+      "source_username": "fern",
+      "timestamp": "2025-02-05",
+      "balance_eth": 0.0108
+    },
+    {
+      "source_id": 1405,
+      "source_username": "Rico_Mueller",
+      "timestamp": "2025-02-04",
+      "balance_eth": 0.1081
+    },
+    {
+      "source_id": 1348,
+      "source_username": "Degen_Whale",
+      "timestamp": "2025-02-01",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 730,
+      "source_username": "miro_kirov",
+      "timestamp": "2025-02-01",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 1006,
+      "source_username": "cubsfanabc",
+      "timestamp": "2025-02-01",
+      "balance_eth": 0.4892
+    },
+    {
+      "source_id": 1291,
+      "source_username": "auslojames",
+      "timestamp": "2025-01-31",
+      "balance_eth": 0.0109
+    },
+    {
+      "source_id": 1004,
+      "source_username": "WickdNFT",
+      "timestamp": "2025-01-31",
+      "balance_eth": 0.2724
+    },
+    {
+      "source_id": 646,
+      "source_username": "DeanoXBT",
+      "timestamp": "2025-01-31",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 741,
+      "source_username": "kycfi_eth",
+      "timestamp": "2025-01-29",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 165,
+      "source_username": "Alphaverse_NFT",
+      "timestamp": "2025-01-29",
+      "balance_eth": 0.0274
+    },
+    {
+      "source_id": 473,
+      "source_username": "0xMakesy",
+      "timestamp": "2025-01-28",
+      "balance_eth": 0.0547
+    },
+    {
+      "source_id": 476,
+      "source_username": "kekbeta",
+      "timestamp": "2025-01-28",
+      "balance_eth": 0.0548
+    },
+    {
+      "source_id": 1073,
+      "source_username": "aphilips",
+      "timestamp": "2025-01-28",
+      "balance_eth": 0.0112
+    },
+    {
+      "source_id": 751,
+      "source_username": "PapaDari_",
+      "timestamp": "2025-01-27",
+      "balance_eth": 0.011
+    },
+    {
+      "source_id": 998,
+      "source_username": "Trippcouch",
+      "timestamp": "2025-01-27",
+      "balance_eth": 0.0876
+    },
+    {
+      "source_id": 1042,
+      "source_username": "Phatiquez",
+      "timestamp": "2025-01-27",
+      "balance_eth": 0.011
+    },
+    {
+      "source_id": 1044,
+      "source_username": "FrancescoFalah",
+      "timestamp": "2025-01-27",
+      "balance_eth": 0.0211
+    },
+    {
+      "source_id": 443,
+      "source_username": "iamdiarrhoea",
+      "timestamp": "2025-01-27",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 189,
+      "source_username": "gremplin",
+      "timestamp": "2025-01-25",
+      "balance_eth": 0.0758
+    },
+    {
+      "source_id": 20,
+      "source_username": "zp_land",
+      "timestamp": "2025-01-25",
+      "balance_eth": 1.0447
+    },
+    {
+      "source_id": 460,
+      "source_username": "kingtan",
+      "timestamp": "2025-01-25",
+      "balance_eth": 0.011
+    },
+    {
+      "source_id": 296,
+      "source_username": "mooncat2878",
+      "timestamp": "2025-01-25",
+      "balance_eth": 0.011
+    },
+    {
+      "source_id": 826,
+      "source_username": "pruggle1",
+      "timestamp": "2025-01-24",
+      "balance_eth": 0.1102
+    },
+    {
+      "source_id": 124,
+      "source_username": "quadwitch",
+      "timestamp": "2025-01-24",
+      "balance_eth": 1.1027
+    },
+    {
+      "source_id": 480,
+      "source_username": "pman555",
+      "timestamp": "2025-01-24",
+      "balance_eth": 0.0111
+    },
+    {
+      "source_id": 766,
+      "source_username": "luckaintluck",
+      "timestamp": "2025-01-24",
+      "balance_eth": 0.0111
+    },
+    {
+      "source_id": 744,
+      "source_username": "blindsquirrelx",
+      "timestamp": "2025-01-24",
+      "balance_eth": 0.1113
+    },
+    {
+      "source_id": 51,
+      "source_username": "bilenkis1",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.1114
+    },
+    {
+      "source_id": 7,
+      "source_username": "adipilla8708",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.0111
+    },
+    {
+      "source_id": 444,
+      "source_username": "smed_b",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.1115
+    },
+    {
+      "source_id": 13,
+      "source_username": "fillip_g",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.1116
+    },
+    {
+      "source_id": 60,
+      "source_username": "EncodedInsight",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.0112
+    },
+    {
+      "source_id": 61,
+      "source_username": "nodexbt",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 15,
+      "source_username": "buz_eth",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 604,
+      "source_username": "WYZRD_",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.0559
+    },
+    {
+      "source_id": 579,
+      "source_username": "RonnieDcky",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.0894
+    },
+    {
+      "source_id": 464,
+      "source_username": "zimmerallday",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.0224
+    },
+    {
+      "source_id": 107,
+      "source_username": "oksajeth",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.0336
+    },
+    {
+      "source_id": 132,
+      "source_username": "_gribb",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.0
+    },
+    {
+      "source_id": 5,
+      "source_username": "yukokosaka",
+      "timestamp": "2025-01-23",
+      "balance_eth": 0.3359
+    },
+    {
+      "source_id": 17,
+      "source_username": "eskacie",
+      "timestamp": "2025-01-22",
+      "balance_eth": 2.2473
+    },
+    {
+      "source_id": 2,
+      "source_username": "porkbus",
+      "timestamp": "2025-01-22",
+      "balance_eth": 1.081
+    },
+    {
+      "source_id": 6,
+      "source_username": "BlueChilliZero",
+      "timestamp": "2025-01-22",
+      "balance_eth": 0.3568
+    },
+    {
+      "source_id": 9,
+      "source_username": "0xak_",
+      "timestamp": "2025-01-22",
+      "balance_eth": 1.1577
+    },
+    {
+      "source_id": 3,
+      "source_username": "0xWorkhorse",
+      "timestamp": "2025-01-22",
+      "balance_eth": 0.0
+    }
+  ]
+}

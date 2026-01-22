@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
+import NetworkGraph from "@/components/NetworkGraph";
 
 type Profile = {
   profile_id: number;
@@ -652,8 +653,8 @@ export default function Home() {
 
   const healthyProfiles = useMemo(() =>
     profiles
-      .filter((p) => p.composite_score < 10 && p.username && p.ethos_score)
-      .sort((a, b) => (b.ethos_score || 0) - (a.ethos_score || 0))
+      .filter((p) => p.composite_score < 5 && p.username && !isOfficialAccount(p.username))
+      .sort((a, b) => a.composite_score - b.composite_score)
       .slice(0, 10),
     [profiles]
   );
@@ -980,6 +981,29 @@ export default function Home() {
                     <div key={label} className="text-zinc-500">{label}</div>
                   ))}
                 </div>
+              </div>
+            </div>
+
+            {/* Real Example: Serpin's Network */}
+            <div className="relative overflow-hidden rounded-3xl border border-zinc-800/50 bg-zinc-900/30 p-8 mt-12">
+              <div className="absolute inset-0 opacity-5">
+                <Image src="/G-9XLSNWYAA4Y5z.jpeg" alt="" fill className="object-cover" />
+              </div>
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-xs px-2 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                    LIVE EXAMPLE
+                  </span>
+                </div>
+                <h3 className="text-2xl font-[family-name:var(--font-recoleta)] text-white mb-2">
+                  @serpinxbt&apos;s Vouch Network
+                </h3>
+                <p className="text-zinc-400 mb-6 max-w-2xl">
+                  As Ethos CEO, serpin has extensive vouch connections. Hover over nodes and edges to explore
+                  who he vouched for, who vouched for him, and mutual connections. High connectivity in founders
+                  is expected—context matters when interpreting risk signals.
+                </p>
+                <NetworkGraph />
               </div>
             </div>
           </div>
