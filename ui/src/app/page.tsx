@@ -690,13 +690,14 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
+      {/* Global noise/dither overlay */}
+      <div className="fixed inset-0 z-[100] pointer-events-none opacity-[0.04]" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`
+      }} />
+
       {/* Animated gradient background - only on landing page */}
       {view === "search" && !searchResult && !notFound && (
         <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-          {/* Noise texture overlay */}
-          <div className="absolute inset-0 opacity-[0.03]" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`
-          }} />
           {/* Animated orange gradient blobs */}
           <div className="absolute w-[800px] h-[800px] -top-[200px] -left-[200px] rounded-full bg-[#FF4000]/10 blur-[120px] animate-[pulse_8s_ease-in-out_infinite]" />
           <div className="absolute w-[600px] h-[600px] top-[30%] right-[-100px] rounded-full bg-[#FF4000]/8 blur-[100px] animate-[pulse_10s_ease-in-out_infinite_2s]" />
