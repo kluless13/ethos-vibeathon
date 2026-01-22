@@ -14,6 +14,7 @@ from .detectors import (
     get_ring_stats,
     precompute_cluster_data,
 )
+from .graph import is_official_account
 
 
 @dataclass
@@ -91,6 +92,18 @@ def calculate_risk_score(
         RiskBreakdown with all component scores and composite
     """
     w = weights or DEFAULT_WEIGHTS
+
+    # Skip official accounts - they have naturally high activity
+    if is_official_account(G, profile_id):
+        return RiskBreakdown(
+            ring_score=0.0,
+            cluster_score=0.0,
+            burst_score=0.0,
+            stake_score=0.0,
+            reciprocity_score=0.0,
+            composite_score=0.0,
+            risk_level="official",
+        )
 
     # Calculate individual scores
     ring_score = calculate_ring_score(
@@ -197,6 +210,7 @@ def get_network_summary(G: nx.DiGraph, results: list[dict]) -> dict:
         "medium": 0,
         "low": 0,
         "minimal": 0,
+        "official": 0,
     }
 
     for r in results:

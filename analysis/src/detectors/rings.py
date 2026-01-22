@@ -2,6 +2,7 @@
 import networkx as nx
 from typing import Iterator
 import time
+from datetime import timedelta
 
 
 def find_rings_around_node(
@@ -93,15 +94,44 @@ def get_rings_for_profile(
     return [ring for ring in all_rings if profile_id in ring]
 
 
+def get_ring_stake(G: nx.DiGraph, ring: list[int]) -> float:
+    """Calculate total stake in a ring's edges."""
+    total_stake = 0.0
+    for i in range(len(ring)):
+        u = ring[i]
+        v = ring[(i + 1) % len(ring)]
+        if G.has_edge(u, v):
+            total_stake += G[u][v].get("weight", 0)
+    return total_stake
+
+
+def get_ring_time_span(G: nx.DiGraph, ring: list[int]) -> timedelta | None:
+    """Calculate time span between earliest and latest vouch in ring."""
+    timestamps = []
+    for i in range(len(ring)):
+        u = ring[i]
+        v = ring[(i + 1) % len(ring)]
+        if G.has_edge(u, v):
+            ts = G[u][v].get("timestamp")
+            if ts:
+                timestamps.append(ts)
+
+    if len(timestamps) < 2:
+        return None
+
+    return max(timestamps) - min(timestamps)
+
+
 def calculate_ring_score(
     G: nx.DiGraph, profile_id: int, max_length: int = 5, precomputed_rings: list = None
 ) -> float:
     """Calculate ring-based risk score for a profile.
 
-    Scoring:
-    - In 3-node ring: +40 points per ring
-    - In 4-node ring: +30 points per ring
-    - In 5-node ring: +20 points per ring
+    Scoring (v2 - stake and temporal weighted):
+    - Base score by ring size: 3-node=40, 4-node=30, 5-node=20
+    - Low stake multiplier: rings with <0.1 ETH total get 1.3x
+    - Fast formation multiplier: rings formed in <7 days get 1.3x
+    - High stake discount: rings with >1 ETH total get 0.7x
 
     Args:
         G: Directed vouch graph
@@ -123,12 +153,37 @@ def calculate_ring_score(
     score = 0.0
     for ring in rings:
         ring_size = len(ring)
+
+        # Base score by size
         if ring_size == 3:
-            score += 40
+            base = 40
         elif ring_size == 4:
-            score += 30
+            base = 30
         elif ring_size == 5:
-            score += 20
+            base = 20
+        else:
+            continue
+
+        # Stake-based modifier
+        ring_stake = get_ring_stake(G, ring)
+        if ring_stake < 0.1:  # Very low stake ring
+            stake_modifier = 1.3
+        elif ring_stake > 1.0:  # High stake ring (more legitimate)
+            stake_modifier = 0.7
+        else:
+            stake_modifier = 1.0
+
+        # Temporal modifier - fast formation is suspicious
+        time_span = get_ring_time_span(G, ring)
+        if time_span and time_span < timedelta(days=7):
+            temporal_modifier = 1.3  # Formed quickly
+        elif time_span and time_span > timedelta(days=90):
+            temporal_modifier = 0.8  # Formed over long time (more organic)
+        else:
+            temporal_modifier = 1.0
+
+        ring_score = base * stake_modifier * temporal_modifier
+        score += ring_score
 
     return min(100.0, score)
 

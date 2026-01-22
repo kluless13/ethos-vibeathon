@@ -1,8 +1,15 @@
 """Build networkx graph from vouch data."""
 import networkx as nx
 from typing import Any
+from datetime import datetime
 
 WEI_PER_ETH = 10**18
+
+# Official accounts to exclude from risk analysis
+OFFICIAL_ACCOUNTS = {
+    "ethosnetwork", "etaborase", "base", "coinbase", "optimism", "arbitrum",
+    "jessepollak", "megaeth", "megaethlabs", "vitalikbuterin", "caborase"
+}
 
 
 def wei_to_eth(wei: str | int) -> float:
@@ -30,10 +37,29 @@ def build_vouch_graph(vouches: list[dict[str, Any]]) -> nx.DiGraph:
         subject = vouch["subjectProfileId"]
         balance = wei_to_eth(vouch.get("balance", "0"))
 
+        # Extract timestamp if available
+        timestamp = None
+        if "activityCheckpoints" in vouch and vouch["activityCheckpoints"]:
+            # Try both formats: vouchedAt (unix) and vouched (ISO string)
+            vouched_at = vouch["activityCheckpoints"].get("vouchedAt") or vouch["activityCheckpoints"].get("vouched")
+            if vouched_at:
+                try:
+                    if isinstance(vouched_at, (int, float)) and vouched_at > 0:
+                        # Unix timestamp
+                        timestamp = datetime.fromtimestamp(vouched_at)
+                    elif isinstance(vouched_at, str):
+                        # ISO format string
+                        timestamp = datetime.fromisoformat(vouched_at.replace("Z", "+00:00"))
+                except (ValueError, TypeError, OSError):
+                    pass
+
         # Add edge (or update weight if exists)
         if G.has_edge(author, subject):
             G[author][subject]["weight"] += balance
             G[author][subject]["count"] += 1
+            # Keep earliest timestamp
+            if timestamp and (not G[author][subject].get("timestamp") or timestamp < G[author][subject]["timestamp"]):
+                G[author][subject]["timestamp"] = timestamp
         else:
             G.add_edge(
                 author,
@@ -42,6 +68,7 @@ def build_vouch_graph(vouches: list[dict[str, Any]]) -> nx.DiGraph:
                 count=1,
                 staked=vouch.get("staked", False),
                 archived=vouch.get("archived", False),
+                timestamp=timestamp,
             )
 
         # Add node attributes if user data available
@@ -56,6 +83,14 @@ def build_vouch_graph(vouches: list[dict[str, Any]]) -> nx.DiGraph:
                 G.nodes[subject]["username"] = vouch["subjectUser"].get("username", "")
 
     return G
+
+
+def is_official_account(G: nx.DiGraph, node: int) -> bool:
+    """Check if a node is a known official account."""
+    username = G.nodes.get(node, {}).get("username", "")
+    if username:
+        return username.lower() in OFFICIAL_ACCOUNTS
+    return False
 
 
 def get_graph_stats(G: nx.DiGraph) -> dict:
