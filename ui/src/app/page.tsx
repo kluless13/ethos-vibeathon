@@ -381,7 +381,12 @@ function getRecommendation(profile: Profile, isOfficial: boolean): { text: strin
   return { text: "Looks good — no suspicious patterns found", type: "safe" };
 }
 
-function ProfileResult({ profile, rings }: { profile: Profile; rings: Ring[] }) {
+function ProfileResult({ profile, rings, ethosData, ethosLoading }: {
+  profile: Profile;
+  rings: Ring[];
+  ethosData: EthosData | null;
+  ethosLoading: boolean;
+}) {
   const config = RISK_CONFIG[profile.risk_level] || RISK_CONFIG.minimal;
   const profileRings = rings.filter((ring) => ring.some((m) => m.profile_id === profile.profile_id));
   const officialInfo = getOfficialInfo(profile.username);
@@ -426,11 +431,15 @@ function ProfileResult({ profile, rings }: { profile: Profile; rings: Ring[] }) 
                     {accountType.icon} {accountType.label}
                   </span>
                 )}
-                {profile.ethos_score && profile.ethos_score > 0 && (
-                  <span className="px-2 py-1 text-xs font-medium rounded-lg bg-zinc-800 text-zinc-300">
-                    Score: {profile.ethos_score}
+                {ethosLoading ? (
+                  <span className="px-2 py-1 text-xs font-medium rounded-lg bg-zinc-800 text-zinc-500">
+                    Loading...
                   </span>
-                )}
+                ) : ethosData ? (
+                  <span className="px-2 py-1 text-xs font-medium rounded-lg bg-zinc-800 text-zinc-300">
+                    Ethos: {ethosData.score.toLocaleString()}
+                  </span>
+                ) : null}
               </div>
             </div>
 
@@ -594,12 +603,21 @@ function fuzzyMatch(query: string, target: string): boolean {
   return qi === q.length;
 }
 
+type EthosData = {
+  score: number;
+  scoreLevel: string;
+  vouchesReceived: number;
+  ethStaked: number;
+};
+
 export default function Home() {
   const [profiles, setProfiles] = useState<Profile[]>([]);
   const [rings, setRings] = useState<Ring[]>([]);
   const [summary, setSummary] = useState<Summary | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResult, setSearchResult] = useState<Profile | null>(null);
+  const [ethosData, setEthosData] = useState<EthosData | null>(null);
+  const [ethosLoading, setEthosLoading] = useState(false);
   const [notFound, setNotFound] = useState(false);
   const [loading, setLoading] = useState(true);
   const [view, setView] = useState<"search" | "learn" | "dashboard">("search");
@@ -625,6 +643,39 @@ export default function Home() {
     loadData();
   }, []);
 
+  // Fetch real Ethos score when a profile is selected
+  useEffect(() => {
+    const username = searchResult?.username;
+    if (!username) {
+      setEthosData(null);
+      return;
+    }
+
+    async function fetchEthosData() {
+      setEthosLoading(true);
+      try {
+        const res = await fetch(`/api/ethos/lookup?username=${username}`);
+        const data = await res.json();
+        if (data.success && data.profile) {
+          setEthosData({
+            score: data.profile.score,
+            scoreLevel: data.profile.scoreLevel,
+            vouchesReceived: data.profile.vouchesReceived,
+            ethStaked: data.profile.ethStaked,
+          });
+        } else {
+          setEthosData(null);
+        }
+      } catch {
+        setEthosData(null);
+      } finally {
+        setEthosLoading(false);
+      }
+    }
+
+    fetchEthosData();
+  }, [searchResult]);
+
   const handleSearch = () => {
     const query = searchQuery.trim().toLowerCase().replace("@", "");
     if (!query) return;
@@ -642,6 +693,7 @@ export default function Home() {
 
   const handleBack = () => {
     setSearchResult(null);
+    setEthosData(null);
     setNotFound(false);
     setSearchQuery("");
   };
@@ -835,7 +887,7 @@ export default function Home() {
                   <span className="group-hover:-translate-x-1 transition-transform">←</span>
                   <span>Back to search</span>
                 </button>
-                <ProfileResult profile={searchResult} rings={rings} />
+                <ProfileResult profile={searchResult} rings={rings} ethosData={ethosData} ethosLoading={ethosLoading} />
               </div>
             )}
 
