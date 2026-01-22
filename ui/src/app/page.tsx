@@ -610,7 +610,7 @@ export default function Home() {
         const [profilesRes, ringsRes, summaryRes] = await Promise.all([
           fetch("/data/profiles_full.json"),
           fetch("/data/rings_named.json"),
-          fetch("/data/summary_20260120_141050.json"),
+          fetch("/data/summary_20260122_193106.json"),
         ]);
         setProfiles(await profilesRes.json());
         setRings(await ringsRes.json());
