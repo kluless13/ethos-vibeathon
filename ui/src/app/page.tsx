@@ -426,7 +426,7 @@ function ProfileResult({ profile, rings }: { profile: Profile; rings: Ring[] }) 
                     {accountType.icon} {accountType.label}
                   </span>
                 )}
-                {profile.ethos_score && (
+                {profile.ethos_score && profile.ethos_score > 0 && (
                   <span className="px-2 py-1 text-xs font-medium rounded-lg bg-zinc-800 text-zinc-300">
                     Score: {profile.ethos_score}
                   </span>
