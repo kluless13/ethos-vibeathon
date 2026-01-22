@@ -2,9 +2,9 @@
 
 **Collusion detection for Ethos Network's reputation system**
 
-Built for [Ethos Vibeathon](https://ethos.network) (Jan 2025) | Category 1: Net New Product
+Built for [Ethos Vibeathon](https://ethos.network) (Jan 2026) | Category 1: Net New Product
 
-[Live Demo](https://ethos-vibeathon.vercel.app) | [Farcaster Mini App](https://ethos-vibeathon.vercel.app/miniapp)
+[Live Demo](https://ethos-vibeathon.vercel.app) | [Farcaster Mini App](https://ethos-vibeathon.vercel.app/miniapp) | [Demo Video](https://www.loom.com/share/4d49d574fc8c4ef1b39035f4fa2b1f53)
 
 ---
 
@@ -169,6 +169,40 @@ if (riskRegistry.getRiskLevel(targetId) >= 2) {
 }
 ```
 
+### Query via RPC (curl/cast)
+
+```bash
+# Get risk score for profile ID 12928 (returns 54)
+cast call 0x12E98FB4ec93c7e61ef4B8A81D29ADD0a626E8Cd \
+  "getRiskScore(uint256)(uint8)" 12928 --rpc-url https://mainnet.base.org
+
+# Check if profile is high risk (returns true for score >= 30)
+cast call 0x12E98FB4ec93c7e61ef4B8A81D29ADD0a626E8Cd \
+  "isHighRisk(uint256)(bool)" 12928 --rpc-url https://mainnet.base.org
+
+# Get risk level (0=minimal, 1=low, 2=medium, 3=high, 4=critical)
+cast call 0x12E98FB4ec93c7e61ef4B8A81D29ADD0a626E8Cd \
+  "getRiskLevel(uint256)(uint8)" 12928 --rpc-url https://mainnet.base.org
+```
+
+### Query via ethers.js/viem
+
+```typescript
+import { createPublicClient, http } from 'viem';
+import { base } from 'viem/chains';
+
+const client = createPublicClient({ chain: base, transport: http() });
+
+const riskScore = await client.readContract({
+  address: '0x12E98FB4ec93c7e61ef4B8A81D29ADD0a626E8Cd',
+  abi: [{ name: 'getRiskScore', type: 'function', inputs: [{ type: 'uint256' }], outputs: [{ type: 'uint8' }] }],
+  functionName: 'getRiskScore',
+  args: [12928n]
+});
+
+console.log(`Risk score: ${riskScore}`); // 54
+```
+
 ---
 
 ## Farcaster Integration
@@ -325,12 +359,14 @@ def detect_bursts(vouches, profile_id, window_days=7):
 
 ## Results
 
-From analyzing the Ethos network:
+From analyzing the Ethos network (53,400+ vouches, 5,800+ profiles):
 
-- **847** collusion rings detected
-- **2,341** profiles involved in at least one ring
-- **42** highly insular clusters (>80% internal vouches)
-- **347** profiles flagged as elevated+ risk
+- **10,000** collusion rings detected (3-5 node cycles)
+- **744** profiles involved in at least one ring
+- **491** profiles flagged as medium+ risk (score ≥ 30)
+- **7** official accounts whitelisted (ethos, serpinxbt, etc.)
+
+All 491 high-risk profiles are stored on-chain at the RiskRegistry contract on Base.
 
 ---
 
@@ -361,9 +397,9 @@ MIT
 
 ## Team
 
-Built by [@kluless13](https://x.com/kluless13) for Ethos Vibeathon
+Built by [@onetrillionx](https://x.com/onetrillionx) for Ethos Vibeathon
 
-**Contact**: Open an issue or reach out on Farcaster/X
+**Contact**: [X/Twitter](https://x.com/onetrillionx) | [Telegram](https://t.me/onetrillionx)
 
 ---
 
