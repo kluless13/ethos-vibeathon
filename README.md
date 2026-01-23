@@ -25,6 +25,22 @@ Reputation systems are only as good as their integrity. When Ethos Network lets 
 
 Trust Ring Detector uses **graph-based analysis** to detect manipulation patterns in Ethos vouch networks. We analyze 53,400+ vouches across 5,800+ profiles using 5 complementary detection signals.
 
+### Our Angle: Decision Support, Not Internal Scoring
+
+**Important distinction**: This tool is designed to help **users decide who to vouch for** - it's a decision-support layer, not a reimplementation of Ethos's internal scoring.
+
+| Ethos Internal Mechanics | Trust Ring Detector |
+|--------------------------|---------------------|
+| Influence handicaps (EIP-12) | Graph-based risk signals |
+| Markets impacting score | Pre-vouch due diligence |
+| Slashing for unethical behavior | Pattern detection |
+| Bounties for sybil detection | Transparency layer |
+| **Defensive** - punish bad actors after the fact | **Preventative** - help good actors avoid bad decisions |
+
+Ethos has their own [anti-gaming mechanisms](https://x.com/ethos_network/status/1988537004808974600) baked into their algorithm. We're not replacing those - we're giving users **visibility into risk signals** before they stake ETH on someone's reputation.
+
+**Why this matters**: When you vouch for a sybil or collusion ring member, your own reputation takes a hit. This tool helps you avoid that mistake.
+
 ### Detection Signals
 
 | Signal | Weight | What It Catches |
